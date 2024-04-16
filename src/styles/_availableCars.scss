@@ -1,0 +1,17 @@
+.car-column {
+    border: 3px solid transparent;
+    transition:  300ms ease;
+}
+
+.car-column:hover {
+    border: 3px solid rgb(15, 92, 224);
+    transition: ease-in-out 500ms;
+}
+
+.filter:focus {
+    outline: none;
+}
+
+.gearshift-icon {
+    height: 20px !important;
+}
