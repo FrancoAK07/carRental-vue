@@ -58,7 +58,6 @@
 	console.log(userLogged.value);
 
 	const closeLoginForm = () => {
-		console.log("close login");
 		showLoginForm.value = false;
 	};
 

@@ -1,0 +1,363 @@
+{
+	"users": [
+		{
+			"id": 1,
+			"firstName": "franco",
+			"lastName": "avena",
+			"email": "franco@email",
+			"password": "$2b$10$C/tS9OBHWO0EOVBbmcDZZuCeXsDeT31f1z5qFFT8jnc4eX0jfZcbm",
+			"bookings": [
+				{
+					"carImg": "src/assets/images/car6.png",
+					"carBrand": "bmw",
+					"carModel": "z4",
+					"pickupLocation": "Miami Int Airport",
+					"returnLocation": "Miami Int Airport",
+					"pickupDate": "Sat, 30 Mar 2024",
+					"returnDate": "Mon, 15 Apr 2024",
+					"pickupTime": "7:46 AM",
+					"returnTime": "12:46 PM",
+					"rentalDays": 16,
+					"pricePerDay": "28",
+					"totalPrice": 448,
+					"totalPlusAddons": 527.84,
+					"addons": [
+						{
+							"_id": "65d24cec323ccd0a6b05b50c",
+							"name": "Gps",
+							"price": "4.99",
+							"details": "stay connected and never get lost",
+							"img": "src/assets/images/gps.png"
+						}
+					]
+				},
+				{
+					"carImg": "src/assets/images/car12.png",
+					"carBrand": "toyota",
+					"carModel": "camry",
+					"pickupLocation": "Madrid Airport",
+					"returnLocation": "Madrid Airport",
+					"pickupDate": "Sat, 30 Mar 2024",
+					"returnDate": "Mon, 15 Apr 2024",
+					"pickupTime": "7:32 AM",
+					"returnTime": "1:32 PM",
+					"rentalDays": 16,
+					"pricePerDay": "26",
+					"totalPrice": 416,
+					"totalPlusAddons": 495.84000000000003,
+					"addons": [
+						{
+							"_id": "65d24cec323ccd0a6b05b50c",
+							"name": "Gps",
+							"price": "4.99",
+							"details": "stay connected and never get lost",
+							"img": "src/assets/images/gps.png"
+						}
+					]
+				}
+			]
+		}
+	],
+	"cars": [
+		{
+			"_id": {
+				"$oid": "65beda91e68ad6b5f1927d55"
+			},
+			"model": "civic",
+			"brand": "honda",
+			"img": "src/assets/images/cars.png",
+			"pickupDate": "",
+			"returnDate": "",
+			"year": "2021",
+			"pricePerDay": "15",
+			"Passengers": "5",
+			"Gearshift": "automatic",
+			"Type": "sedan"
+		},
+		{
+			"_id": {
+				"$oid": "65bedbd47afaa07b69643a65"
+			},
+			"model": "corolla",
+			"brand": "toyota",
+			"img": "src/assets/images/electric.png",
+			"pickupDate": "",
+			"returnDate": "",
+			"year": 2022,
+			"pricePerDay": "10",
+			"Gearshift": "automatic",
+			"Passengers": "5",
+			"Type": "sedan"
+		},
+		{
+			"_id": {
+				"$oid": "65bf03ba30a8e3851638e60e"
+			},
+			"model": "phantom",
+			"brand": "rolls royce",
+			"img": "src/assets/images/luxury.png",
+			"pickupDate": "",
+			"returnDate": "",
+			"year": 2022,
+			"pricePerDay": "40",
+			"Gearshift": "manual",
+			"Passengers": "4",
+			"Type": "convertible"
+		},
+		{
+			"_id": {
+				"$oid": "65e211ebfd0db9a13b6d423b"
+			},
+			"model": "camry",
+			"brand": "toyota",
+			"img": "src/assets/images/car1.png",
+			"pickupDate": "",
+			"returnDate": "",
+			"year": 2022,
+			"pricePerDay": "15",
+			"Gearshift": "manual",
+			"Passengers": "5",
+			"Type": "sedan"
+		},
+		{
+			"_id": {
+				"$oid": "65e211ebfd0db9a13b6d423c"
+			},
+			"model": "rav4",
+			"brand": "toyota",
+			"img": "src/assets/images/car2.png",
+			"pickupDate": "",
+			"returnDate": "",
+			"year": 2023,
+			"pricePerDay": "15",
+			"Gearshift": "automatic",
+			"Passengers": "7",
+			"Type": "SUV"
+		},
+		{
+			"_id": {
+				"$oid": "65e22242fd0db9a13b6d423e"
+			},
+			"model": "blazer",
+			"brand": "chevrolet",
+			"img": "src/assets/images/car3.png",
+			"pickupDate": "",
+			"returnDate": "",
+			"year": 2023,
+			"pricePerDay": "22",
+			"Gearshift": "manual",
+			"Passengers": "5",
+			"Type": "SUV"
+		},
+		{
+			"_id": {
+				"$oid": "65e22242fd0db9a13b6d423f"
+			},
+			"model": "X1",
+			"brand": "bmw",
+			"img": "src/assets/images/car4.png",
+			"pickupDate": "",
+			"returnDate": "Mon, 15 Apr 2024",
+			"year": 2021,
+			"pricePerDay": "27",
+			"Gearshift": "automatic",
+			"Passengers": "5",
+			"Type": "SUV"
+		},
+		{
+			"_id": {
+				"$oid": "65e22242fd0db9a13b6d4240"
+			},
+			"model": "iX",
+			"brand": "bmw",
+			"img": "src/assets/images/car5.png",
+			"pickupDate": "",
+			"returnDate": "",
+			"year": 2021,
+			"pricePerDay": "30",
+			"Gearshift": "manual",
+			"Passengers": "7",
+			"Type": "SUV"
+		},
+		{
+			"_id": {
+				"$oid": "65e22242fd0db9a13b6d4241"
+			},
+			"model": "z4",
+			"brand": "bmw",
+			"img": "src/assets/images/car6.png",
+			"pickupDate": "",
+			"returnDate": "Mon, 15 Apr 2024",
+			"year": 2020,
+			"pricePerDay": "28",
+			"Gearshift": "automatic",
+			"Passengers": "4",
+			"Type": "convertible"
+		},
+		{
+			"_id": {
+				"$oid": "65e22242fd0db9a13b6d4242"
+			},
+			"model": "mustang",
+			"brand": "ford",
+			"img": "src/assets/images/car7.png",
+			"pickupDate": "",
+			"returnDate": "",
+			"year": 2022,
+			"pricePerDay": "18",
+			"Gearshift": "manual",
+			"Passengers": "4",
+			"Type": "convertible"
+		},
+		{
+			"_id": {
+				"$oid": "65e22242fd0db9a13b6d4243"
+			},
+			"model": "bentayga",
+			"brand": "bentley",
+			"img": "src/assets/images/car8.png",
+			"pickupDate": "",
+			"returnDate": "",
+			"year": 2023,
+			"pricePerDay": "32",
+			"Gearshift": "automatic",
+			"Passengers": "7",
+			"Type": "SUV"
+		},
+		{
+			"_id": {
+				"$oid": "65e22242fd0db9a13b6d4244"
+			},
+			"model": "continental",
+			"brand": "bentley",
+			"img": "src/assets/images/car9.png",
+			"pickupDate": "",
+			"returnDate": "Mon, 15 Apr 2024",
+			"year": 2022,
+			"pricePerDay": "24",
+			"Gearshift": "manual",
+			"Passengers": "7",
+			"Type": "convertible"
+		},
+		{
+			"_id": {
+				"$oid": "65e225d1fd0db9a13b6d4246"
+			},
+			"model": "2 series",
+			"brand": "bmw",
+			"img": "src/assets/images/car10.png",
+			"pickupDate": "",
+			"returnDate": "",
+			"year": 2023,
+			"pricePerDay": "25",
+			"Gearshift": "automatic",
+			"Passengers": "5",
+			"Type": "sedan"
+		},
+		{
+			"_id": {
+				"$oid": "65e225d1fd0db9a13b6d4247"
+			},
+			"model": "sentra",
+			"brand": "nissan",
+			"img": "src/assets/images/car11.png",
+			"pickupDate": "",
+			"returnDate": "Sat, 30 Mar 2024",
+			"year": 2023,
+			"pricePerDay": "20",
+			"Gearshift": "manual",
+			"Passengers": "5",
+			"Type": "sedan"
+		},
+		{
+			"_id": {
+				"$oid": "65e225d1fd0db9a13b6d4248"
+			},
+			"model": "camry",
+			"brand": "toyota",
+			"img": "src/assets/images/car12.png",
+			"pickupDate": "",
+			"returnDate": "Mon, 15 Apr 2024",
+			"year": 2024,
+			"pricePerDay": "26",
+			"Gearshift": "automatic",
+			"Passengers": "5",
+			"Type": "sedan"
+		},
+		{
+			"_id": {
+				"$oid": "65e227a1fd0db9a13b6d424a"
+			},
+			"model": "8 series",
+			"brand": "bmw",
+			"img": "src/assets/images/car13.png",
+			"pickupDate": "",
+			"returnDate": "",
+			"year": 2024,
+			"pricePerDay": "35",
+			"Gearshift": "manual",
+			"Passengers": "4",
+			"Type": "convertible"
+		},
+		{
+			"_id": {
+				"$oid": "65e227a1fd0db9a13b6d424b"
+			},
+			"model": "suburban",
+			"brand": "chevrolet",
+			"img": "src/assets/images/car14.png",
+			"pickupDate": "",
+			"returnDate": "",
+			"year": 2022,
+			"pricePerDay": "32",
+			"Gearshift": "automatic",
+			"Passengers": "7",
+			"Type": "SUV"
+		},
+		{
+			"_id": {
+				"$oid": "65e227a1fd0db9a13b6d424c"
+			},
+			"model": "tahoe",
+			"brand": "chevrolet",
+			"img": "src/assets/images/car15.png",
+			"pickupDate": "",
+			"returnDate": "",
+			"year": 2023,
+			"pricePerDay": "30",
+			"Gearshift": "automatic",
+			"Passengers": "7",
+			"Type": "SUV"
+		},
+		{
+			"_id": {
+				"$oid": "65e227a1fd0db9a13b6d424d"
+			},
+			"model": "escalade",
+			"brand": "cadillac",
+			"img": "src/assets/images/car16.png",
+			"pickupDate": "",
+			"returnDate": "",
+			"year": 2023,
+			"pricePerDay": "29",
+			"Gearshift": "automatic",
+			"Passengers": "7",
+			"Type": "SUV"
+		},
+		{
+			"_id": {
+				"$oid": "65fb76d920d81814b1f05b0f"
+			},
+			"model": "cayanne",
+			"brand": "porsche",
+			"img": "src/assets/images/suv.png",
+			"pickupDate": "",
+			"returnDate": "Sat, 30 Mar 2024",
+			"year": 2023,
+			"pricePerDay": "25",
+			"Gearshift": "manual",
+			"Passengers": "7",
+			"Type": "SUV"
+		}
+	]
+}

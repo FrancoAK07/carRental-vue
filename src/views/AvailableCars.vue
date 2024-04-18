@@ -46,7 +46,7 @@
 				</div>
 			</div>
 			<div class="row g-0 my-3">
-				<div class="car-column col-sm-6 col-lg-4 p-1 rounded-4" v-for="car of availableCars">
+				<div class="car-column col-sm-6 col-lg-4 p-1 rounded-4" v-for="car of availableCars ? availableCars : localDbavailableCars">
 					<div class="bg-dark rounded-4 w-100 p-3 text-white">
 						<div class="row w-100 mx-auto">
 							<h5>Brand: {{ car.brand }}</h5>
@@ -82,6 +82,8 @@
 	const typeRef = ref();
 	const passengersRef = ref();
 	const carsData = await axios.get("http://localhost:5000/cars");
+	const localDbCarsData = await axios.get("http://localhost:5001/cars");
+	const localDbCars = localDbCarsData.data;
 	const cars = carsData.data;
 	let totalPrice;
 
@@ -104,6 +106,13 @@
 			return pickupDate > new Date(car.returnDate) || car.returnDate === "";
 		})
 	);
+
+	const localDbavailableCars = ref(
+		localDbCars.filter((car) => {
+			return pickupDate > new Date(car.returnDate) || car.returnDate === "";
+		})
+	);
+	//--
 
 	//filter functions
 	const priceFilter = () => {

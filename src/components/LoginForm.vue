@@ -40,7 +40,6 @@
 	});
 
 	window.addEventListener("click", (e) => {
-		console.log(props.loginHamburger);
 		if (loginForm.value && props.loginLink) {
 			if (
 				!loginForm.value.contains(e.target) &&

@@ -15,8 +15,8 @@
 							<h5 class="text-center m-0 p-1">Simple and easy</h5>
 						</div>
 						<p class="p-2">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quaerat mollitia, fuga voluptatem similique iure architecto dolore sit nam
-							voluptatibus. Omnis iste fugit error obcaecati nobis similique alias modi ut.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quaerat mollitia, fuga voluptatem similique iure architecto dolore sit
+							nam voluptatibus. Omnis iste fugit error obcaecati nobis similique alias modi ut.
 						</p>
 					</div>
 				</div>
@@ -26,9 +26,9 @@
 							<h5 class="text-center m-0 p-1">Every car for your needs</h5>
 						</div>
 						<p class="p-2">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nam cumque possimus odio ipsa veniam officiis eveniet corporis ducimus optio
-							perspiciatis distinctio dolorum fugit illum praesentium autem consequuntur at nisi, deleniti, ab porro, temporibus mollitia sunt iusto? Impedit,
-							asperiores. Laboriosam?
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nam cumque possimus odio ipsa veniam officiis eveniet corporis ducimus
+							optio perspiciatis distinctio dolorum fugit illum praesentium autem consequuntur at nisi, deleniti, ab porro, temporibus mollitia sunt
+							iusto? Impedit, asperiores. Laboriosam?
 						</p>
 					</div>
 				</div>
@@ -38,8 +38,8 @@
 							<h5 class="text-center m-0 p-1">Outstanding customer service</h5>
 						</div>
 						<p class="p-2">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatibus blanditiis repellendus eos dicta nisi deleniti amet consequatur
-							minima debitis.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatibus blanditiis repellendus eos dicta nisi deleniti amet
+							consequatur minima debitis.
 						</p>
 					</div>
 				</div>
