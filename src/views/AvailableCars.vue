@@ -46,7 +46,7 @@
 				</div>
 			</div>
 			<div class="row g-0 my-3">
-				<div class="car-column col-sm-6 col-lg-4 p-1 rounded-4" v-for="car of availableCars ? availableCars : localDbavailableCars">
+				<div class="car-column col-sm-6 col-lg-4 p-1 rounded-4" v-for="car of availableCars ? availableCars : localAvailableCars">
 					<div class="bg-dark rounded-4 w-100 p-3 text-white">
 						<div class="row w-100 mx-auto">
 							<h5>Brand: {{ car.brand }}</h5>
@@ -81,11 +81,19 @@
 	const gearshiftRef = ref();
 	const typeRef = ref();
 	const passengersRef = ref();
-	const carsData = await axios.get("http://localhost:5000/cars");
-	const localDbCarsData = await axios.get("http://localhost:5001/cars");
-	const localDbCars = localDbCarsData.data;
-	const cars = carsData.data;
 	let totalPrice;
+	let carsData = [];
+
+	try {
+		carsData = await axios.get("http://localhost:5001/cars");
+	} catch (error) {
+		carsData = await axios.get("http://localhost:5000/cars");
+		console.log(error);
+	}
+
+	const cars = carsData.data;
+
+	console.log(cars);
 
 	//get booking info from sessionStorage
 	const bookingInfo = JSON.parse(sessionStorage.getItem("bookingInfo"));
@@ -96,19 +104,10 @@
 	const returnDate = new Date(bookingInfo.returnDate);
 	let differenceInTime = returnDate.getTime() - pickupDate.getTime();
 	let differenceInDays = Math.round(differenceInTime / (1000 * 3600 * 24));
-	console.log(differenceInDays);
-	console.log(pickupDate, returnDate);
-	console.log(returnDate > pickupDate);
 
 	//new array of cars available in that pickup date
 	const availableCars = ref(
 		cars.filter((car) => {
-			return pickupDate > new Date(car.returnDate) || car.returnDate === "";
-		})
-	);
-
-	const localDbavailableCars = ref(
-		localDbCars.filter((car) => {
 			return pickupDate > new Date(car.returnDate) || car.returnDate === "";
 		})
 	);

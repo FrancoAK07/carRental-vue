@@ -81,7 +81,17 @@
 	import axios from "axios";
 	import LocationDateTimeForm from "@/components/LocationDate&Time/LocationDateTimeForm.vue";
 
-	const carsData = await axios.get("http://localhost:5000/cars");
+	let carsData;
+
+	try {
+		carsData = await axios.get("http://localhost:5001/cars");
+		console.log("json-server");
+	} catch (error) {
+		console.log(error);
+		carsData = await axios.get("http://localhost:5000/cars");
+		console.log("database");
+	}
+
 	const cars = ref(carsData.data);
 
 	let priceRef = ref();
