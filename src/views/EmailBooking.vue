@@ -23,10 +23,20 @@
 
 	const toast = useToast();
 	const bookingEmail = defineModel("bookingEmail");
-	const users = await axios.get("http://localhost:5000/getUsers");
-	const unregisteredUsers = await axios.get("http://localhost:5000/getUnregisteredUsers");
+	let users;
+	let unregisteredUsers;
 
-	console.log(users.data);
+	try {
+		users = await axios.get("http://localhost:5001/users");
+		unregisteredUsers = await axios.get("http://localhost:5001/unregisteredUser");
+	} catch (error) {
+		console.log(error);
+		users = await axios.get("http://localhost:5000/getUsers");
+		unregisteredUsers = await axios.get("http://localhost:5000/getUnregisteredUsers");
+	}
+
+	console.log(users);
+	console.log(unregisteredUsers);
 
 	onBeforeRouteLeave((to, from, next) => {
 		if (to.path === "/bookings") {

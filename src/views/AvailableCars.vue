@@ -46,7 +46,7 @@
 				</div>
 			</div>
 			<div class="row g-0 my-3">
-				<div class="car-column col-sm-6 col-lg-4 p-1 rounded-4" v-for="car of availableCars ? availableCars : localAvailableCars">
+				<div class="car-column col-sm-6 col-lg-4 p-1 rounded-4" v-for="car of availableCars">
 					<div class="bg-dark rounded-4 w-100 p-3 text-white">
 						<div class="row w-100 mx-auto">
 							<h5>Brand: {{ car.brand }}</h5>

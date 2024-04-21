@@ -41,10 +41,20 @@
 	let details = [false, false];
 	const linkRef = ref(null);
 	const checkedRef = ref(null);
-	const addonsData = await axios.get("http://localhost:5000/addons");
-	const addons = addonsData.data;
+	let addonsData;
 	let selectedAddons = [];
 	let userIsLogged = JSON.parse(sessionStorage.getItem("user"));
+
+	try {
+		addonsData = await axios.get("http://localhost:5001/addons");
+	} catch (error) {
+		console.log(error);
+		addonsData = await axios.get("http://localhost:5000/addons");
+	}
+
+	const addons = addonsData.data;
+
+	console.log(addons);
 
 	//handle next route path
 	const checkoutPath = computed(() => {

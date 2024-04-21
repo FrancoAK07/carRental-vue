@@ -28,7 +28,9 @@
 				<button class="btn btn-primary w-75 mx-auto" @click="createAccount">Create Account</button>
 			</div>
 			<div class="row w-100 mx-auto text-center">
-				<p class="m-0 p-0">Already have an account? Sign in <a ref="signInLink" class="text-decoration-none" href="#" @click="signInClick">Here</a></p>
+				<p class="m-0 p-0">
+					Already have an account? Sign in <a ref="signInLink" class="text-decoration-none" href="#" @click="signInClick">Here</a>
+				</p>
 			</div>
 		</div>
 	</div>
@@ -85,14 +87,20 @@
 		} else if (password.value.length < 5) {
 			toast.warning("password must be at least 5 characters long", { timeout: 3000 });
 		} else {
-			axios.post("http://localhost:5000/registerUser", { user: user.value }).then((res) => {
-				toast.success(res.data);
-				emit("closeRegisterForm");
-				firstName.value = "";
-				lastName.value = "";
-				email.value = "";
-				password.value = "";
-			});
+			try {
+				axios.post("http://localhost:5001/users", user.value).then((res) => {
+					console.log(res.data);
+				});
+			} catch (error) {
+				axios.post("http://localhost:5000/registerUser", { user: user.value }).then((res) => {
+					toast.success(res.data);
+					emit("closeRegisterForm");
+					firstName.value = "";
+					lastName.value = "";
+					email.value = "";
+					password.value = "";
+				});
+			}
 		}
 	}
 </script>

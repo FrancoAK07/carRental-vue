@@ -146,11 +146,25 @@
 		if (userBooking.returnLocation === "") {
 			userBooking.returnLocation = userBooking.pickupLocation;
 		}
-		axios.post("http://localhost:5000/userbooking", { booking: userBooking, email: user.email }).then((res) => {
-			toast(res.data, { timeout: 3000 });
-		});
-
-		axios.post("http://localhost:5000/carReturnDate", { carReturnDate: userBooking.returnDate, carId: bookingInfo.car._id });
+		try {
+			axios.get(`http://localhost:5001/users?email=${user.email}`).then((res) => {
+				console.log(res.data);
+				res.data[0].bookings.push(userBooking);
+				console.log(res.data);
+				axios.put(`http://localhost:5001/users/${res.data[0].id}`, res.data[0]).then((res) => {
+					console.log(res);
+					if (res.status === 200) {
+						toast.success("booking created successfully");
+					}
+				});
+			});
+		} catch (error) {
+			console.log(error);
+			axios.post("http://localhost:5000/userbooking", { booking: userBooking, email: user.email }).then((res) => {
+				toast(res.data, { timeout: 3000 });
+			});
+			axios.post("http://localhost:5000/carReturnDate", { carReturnDate: userBooking.returnDate, carId: bookingInfo.car._id });
+		}
 
 		router.push({ path: "/" });
 	}
