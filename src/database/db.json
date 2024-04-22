@@ -1,648 +1,673 @@
 {
-	"users": [
-		{
-			"id": "1",
-			"firstName": "franco",
-			"lastName": "avena",
-			"email": "franco@email",
-			"password": "$2b$10$C/tS9OBHWO0EOVBbmcDZZuCeXsDeT31f1z5qFFT8jnc4eX0jfZcbm",
-			"bookings": [
-				{
-					"carImg": "src/assets/images/car6.png",
-					"carBrand": "bmw",
-					"carModel": "z4",
-					"pickupLocation": "Miami Int Airport",
-					"returnLocation": "Miami Int Airport",
-					"pickupDate": "Sat, 30 Mar 2024",
-					"returnDate": "Mon, 15 Apr 2024",
-					"pickupTime": "7:46 AM",
-					"returnTime": "12:46 PM",
-					"rentalDays": 16,
-					"pricePerDay": "28",
-					"totalPrice": 448,
-					"totalPlusAddons": 527.84,
-					"addons": [
-						{
-							"_id": "65d24cec323ccd0a6b05b50c",
-							"name": "Gps",
-							"price": "4.99",
-							"details": "stay connected and never get lost",
-							"img": "src/assets/images/gps.png"
-						}
-					]
-				},
-				{
-					"carImg": "src/assets/images/car2.png",
-					"carBrand": "toyota",
-					"carModel": "rav4",
-					"pickupLocation": "Miami Int Airport",
-					"returnLocation": "Miami Int Airport",
-					"pickupDate": "Thu, 25 Apr 2024",
-					"returnDate": "Tue, 30 Apr 2024",
-					"pickupTime": "6:32 AM",
-					"returnTime": "1:32 PM",
-					"rentalDays": 5,
-					"pricePerDay": "15",
-					"totalPrice": 75,
-					"totalPlusAddons": 129.85000000000002,
-					"addons": [
-						{
-							"id": "1",
-							"name": "Infant seat",
-							"price": "2.99",
-							"details": "A seat for children for up to 12 months old",
-							"img": "src/assets/images/babyseat.png"
-						},
-						{
-							"id": "2",
-							"name": "Toddler seat",
-							"price": "2.99",
-							"details": "A seat for children from 1 to 4 years old",
-							"img": "src/assets/images/babyseat.png"
-						},
-						{
-							"id": "3",
-							"name": "Gps",
-							"price": "4.99",
-							"details": "stay connected and never get lost",
-							"img": "src/assets/images/gps.png"
-						}
-					]
-				}
-			]
-		},
-		{
-			"id": "2",
-			"firstName": "mario",
-			"lastName": "avena",
-			"email": "mario@email",
-			"password": "$2b$10$y1tQQ8z9Hlu4Ht7sQVpLq.zhfpfECfQfI/RQJOmmvN9S8SgE77mZi",
-			"bookings": [
-				{
-					"carImg": "src/assets/images/car11.png",
-					"carBrand": "nissan",
-					"carModel": "sentra",
-					"pickupLocation": "Caracas Int Airport",
-					"returnLocation": "Caracas Int Airport",
-					"pickupDate": "Mon, 25 Mar 2024",
-					"returnDate": "Sat, 30 Mar 2024",
-					"pickupTime": "7:48 AM",
-					"returnTime": "4:48 PM",
-					"rentalDays": 5,
-					"pricePerDay": "20",
-					"totalPrice": 100,
-					"totalPlusAddons": 124.95,
-					"addons": [
-						{
-							"_id": "65d24cec323ccd0a6b05b50c",
-							"name": "Gps",
-							"price": "4.99",
-							"details": "stay connected and never get lost",
-							"img": "src/assets/images/gps.png"
-						}
-					]
-				},
-				{
-					"carImg": "src/assets/images/car4.png",
-					"carBrand": "bmw",
-					"carModel": "X1",
-					"pickupLocation": "Miami Int Airport",
-					"returnLocation": "Miami Int Airport",
-					"pickupDate": "Sat, 30 Mar 2024",
-					"returnDate": "Mon, 15 Apr 2024",
-					"pickupTime": "8:06 AM",
-					"returnTime": "1:06 PM",
-					"rentalDays": 16,
-					"pricePerDay": "27",
-					"totalPrice": 432,
-					"totalPlusAddons": 607.5200000000001,
-					"addons": [
-						{
-							"_id": "65d24cec323ccd0a6b05b50b",
-							"name": "Toddler seat",
-							"price": "2.99",
-							"details": "A seat for children from 1 to 4 years old",
-							"img": "src/assets/images/babyseat.png"
-						},
-						{
-							"_id": "65d24cec323ccd0a6b05b50c",
-							"name": "Gps",
-							"price": "4.99",
-							"details": "stay connected and never get lost",
-							"img": "src/assets/images/gps.png"
-						},
-						{
-							"_id": "65d24cec323ccd0a6b05b50a",
-							"name": "Infant seat",
-							"price": "2.99",
-							"details": "A seat for children for up to 12 months old",
-							"img": "src/assets/images/babyseat.png"
-						}
-					]
-				},
-				{
-					"carImg": "src/assets/images/car9.png",
-					"carBrand": "bentley",
-					"carModel": "continental",
-					"pickupLocation": "Caracas Int Airport",
-					"returnLocation": "Caracas Int Airport",
-					"pickupDate": "Sat, 30 Mar 2024",
-					"returnDate": "Mon, 15 Apr 2024",
-					"pickupTime": "7:54 AM",
-					"returnTime": "10:54 PM",
-					"rentalDays": 16,
-					"pricePerDay": "24",
-					"totalPrice": 384,
-					"totalPlusAddons": 463.84000000000003,
-					"addons": [
-						{
-							"_id": "65d24cec323ccd0a6b05b50c",
-							"name": "Gps",
-							"price": "4.99",
-							"details": "stay connected and never get lost",
-							"img": "src/assets/images/gps.png"
-						}
-					]
-				}
-			]
-		},
-		{
-			"id": "3",
-			"firstName": "Maria",
-			"lastName": "Avena",
-			"email": "maria@email",
-			"password": "maria97"
-		}
-	],
-	"unregisteredUser": [
-		{
-			"id": "1",
-			"firstName": "cristiano ",
-			"lastName": "ronaldo",
-			"email": "cris@email",
-			"phone": "0987",
-			"bookings": [
-				{
-					"country": "venezuela",
-					"carImg": "src/assets/images/car2.png",
-					"carBrand": "toyota",
-					"carModel": "rav4",
-					"pickupLocation": "Miami Int Airport",
-					"returnLocation": "Caracas Int Airport",
-					"pickupDate": "Sat, 30 Mar 2024",
-					"returnDate": "Wed, 17 Apr 2024",
-					"pickupTime": "8:28 AM",
-					"returnTime": "1:28 PM",
-					"rentalDays": 18,
-					"pricePerDay": "15",
-					"totalPrice": 270,
-					"totalPlusAddons": 413.64,
-					"addons": [
-						{
-							"_id": "65d24cec323ccd0a6b05b50b",
-							"name": "Toddler seat",
-							"price": "2.99",
-							"details": "A seat for children from 1 to 4 years old",
-							"img": "src/assets/images/babyseat.png"
-						},
-						{
-							"_id": "65d24cec323ccd0a6b05b50c",
-							"name": "Gps",
-							"price": "4.99",
-							"details": "stay connected and never get lost",
-							"img": "src/assets/images/gps.png"
-						}
-					]
-				}
-			]
-		},
-		{
-			"id": "2",
-			"firstName": "luka",
-			"lastName": "modric",
-			"email": "luka@email",
-			"phone": "567",
-			"bookings": [
-				{
-					"country": "venezuela",
-					"carImg": "src/assets/images/car4.png",
-					"carBrand": "bmw",
-					"carModel": "X1",
-					"pickupLocation": "Caracas Int Airport",
-					"returnLocation": "Caracas Int Airport",
-					"pickupDate": "Thu, 25 Apr 2024",
-					"returnDate": "Tue, 30 Apr 2024",
-					"pickupTime": "4:55 AM",
-					"returnTime": "12:55 PM",
-					"rentalDays": 5,
-					"pricePerDay": "27",
-					"totalPrice": 135,
-					"totalPlusAddons": 159.95,
-					"addons": [
-						{
-							"id": "3",
-							"name": "Gps",
-							"price": "4.99",
-							"details": "stay connected and never get lost",
-							"img": "src/assets/images/gps.png"
-						}
-					]
-				},
-				{
-					"country": "venezuela",
-					"carImg": "src/assets/images/car3.png",
-					"carBrand": "chevrolet",
-					"carModel": "blazer",
-					"pickupLocation": "Miami Int Airport",
-					"returnLocation": "Miami Int Airport",
-					"pickupDate": "Thu, 25 Apr 2024",
-					"returnDate": "Tue, 30 Apr 2024",
-					"pickupTime": "12:07 PM",
-					"returnTime": "7:07 AM",
-					"rentalDays": 5,
-					"pricePerDay": "22",
-					"totalPrice": 110,
-					"totalPlusAddons": 134.95,
-					"addons": [
-						{
-							"id": "3",
-							"name": "Gps",
-							"price": "4.99",
-							"details": "stay connected and never get lost",
-							"img": "src/assets/images/gps.png"
-						}
-					]
-				}
-			]
-		},
-		{
-			"id": "3",
-			"firstName": "phil",
-			"lastName": "foden",
-			"email": "phil@email",
-			"phone": "567",
-			"bookings": []
-		},
-		{
-			"id": "4",
-			"firstName": "kevin",
-			"lastName": "de bruyne",
-			"email": "kevin@email",
-			"phone": "159",
-			"bookings": []
-		},
-		{
-			"id": "5",
-			"firstName": "mariquin",
-			"lastName": "cat",
-			"email": "mariquin@email",
-			"phone": "567",
-			"bookings": []
-		}
-	],
-	"cars": [
-		{
-			"_id": {
-				"$oid": "65beda91e68ad6b5f1927d55"
-			},
-			"model": "civic",
-			"brand": "honda",
-			"img": "src/assets/images/cars.png",
-			"pickupDate": "",
-			"returnDate": "",
-			"year": "2021",
-			"pricePerDay": "15",
-			"Passengers": "5",
-			"Gearshift": "automatic",
-			"Type": "sedan",
-			"id": "c17f"
-		},
-		{
-			"_id": {
-				"$oid": "65bedbd47afaa07b69643a65"
-			},
-			"model": "corolla",
-			"brand": "toyota",
-			"img": "src/assets/images/electric.png",
-			"pickupDate": "",
-			"returnDate": "",
-			"year": 2022,
-			"pricePerDay": "10",
-			"Gearshift": "automatic",
-			"Passengers": "5",
-			"Type": "sedan",
-			"id": "afa0"
-		},
-		{
-			"_id": {
-				"$oid": "65bf03ba30a8e3851638e60e"
-			},
-			"model": "phantom",
-			"brand": "rolls royce",
-			"img": "src/assets/images/luxury.png",
-			"pickupDate": "",
-			"returnDate": "",
-			"year": 2022,
-			"pricePerDay": "40",
-			"Gearshift": "manual",
-			"Passengers": "4",
-			"Type": "convertible",
-			"id": "445f"
-		},
-		{
-			"_id": {
-				"$oid": "65e211ebfd0db9a13b6d423b"
-			},
-			"model": "camry",
-			"brand": "toyota",
-			"img": "src/assets/images/car1.png",
-			"pickupDate": "",
-			"returnDate": "",
-			"year": 2022,
-			"pricePerDay": "15",
-			"Gearshift": "manual",
-			"Passengers": "5",
-			"Type": "sedan",
-			"id": "a865"
-		},
-		{
-			"_id": {
-				"$oid": "65e211ebfd0db9a13b6d423c"
-			},
-			"model": "rav4",
-			"brand": "toyota",
-			"img": "src/assets/images/car2.png",
-			"pickupDate": "",
-			"returnDate": "",
-			"year": 2023,
-			"pricePerDay": "15",
-			"Gearshift": "automatic",
-			"Passengers": "7",
-			"Type": "SUV",
-			"id": "cb64"
-		},
-		{
-			"_id": {
-				"$oid": "65e22242fd0db9a13b6d423e"
-			},
-			"model": "blazer",
-			"brand": "chevrolet",
-			"img": "src/assets/images/car3.png",
-			"pickupDate": "",
-			"returnDate": "",
-			"year": 2023,
-			"pricePerDay": "22",
-			"Gearshift": "manual",
-			"Passengers": "5",
-			"Type": "SUV",
-			"id": "7db1"
-		},
-		{
-			"_id": {
-				"$oid": "65e22242fd0db9a13b6d423f"
-			},
-			"model": "X1",
-			"brand": "bmw",
-			"img": "src/assets/images/car4.png",
-			"pickupDate": "",
-			"returnDate": "Mon, 15 Apr 2024",
-			"year": 2021,
-			"pricePerDay": "27",
-			"Gearshift": "automatic",
-			"Passengers": "5",
-			"Type": "SUV",
-			"id": "449f"
-		},
-		{
-			"_id": {
-				"$oid": "65e22242fd0db9a13b6d4240"
-			},
-			"model": "iX",
-			"brand": "bmw",
-			"img": "src/assets/images/car5.png",
-			"pickupDate": "",
-			"returnDate": "",
-			"year": 2021,
-			"pricePerDay": "30",
-			"Gearshift": "manual",
-			"Passengers": "7",
-			"Type": "SUV",
-			"id": "4a3e"
-		},
-		{
-			"_id": {
-				"$oid": "65e22242fd0db9a13b6d4241"
-			},
-			"model": "z4",
-			"brand": "bmw",
-			"img": "src/assets/images/car6.png",
-			"pickupDate": "",
-			"returnDate": "Mon, 15 Apr 2024",
-			"year": 2020,
-			"pricePerDay": "28",
-			"Gearshift": "automatic",
-			"Passengers": "4",
-			"Type": "convertible",
-			"id": "b45b"
-		},
-		{
-			"_id": {
-				"$oid": "65e22242fd0db9a13b6d4242"
-			},
-			"model": "mustang",
-			"brand": "ford",
-			"img": "src/assets/images/car7.png",
-			"pickupDate": "",
-			"returnDate": "",
-			"year": 2022,
-			"pricePerDay": "18",
-			"Gearshift": "manual",
-			"Passengers": "4",
-			"Type": "convertible",
-			"id": "3d01"
-		},
-		{
-			"_id": {
-				"$oid": "65e22242fd0db9a13b6d4243"
-			},
-			"model": "bentayga",
-			"brand": "bentley",
-			"img": "src/assets/images/car8.png",
-			"pickupDate": "",
-			"returnDate": "",
-			"year": 2023,
-			"pricePerDay": "32",
-			"Gearshift": "automatic",
-			"Passengers": "7",
-			"Type": "SUV",
-			"id": "1151"
-		},
-		{
-			"_id": {
-				"$oid": "65e22242fd0db9a13b6d4244"
-			},
-			"model": "continental",
-			"brand": "bentley",
-			"img": "src/assets/images/car9.png",
-			"pickupDate": "",
-			"returnDate": "Mon, 15 Apr 2024",
-			"year": 2022,
-			"pricePerDay": "24",
-			"Gearshift": "manual",
-			"Passengers": "7",
-			"Type": "convertible",
-			"id": "28d4"
-		},
-		{
-			"_id": {
-				"$oid": "65e225d1fd0db9a13b6d4246"
-			},
-			"model": "2 series",
-			"brand": "bmw",
-			"img": "src/assets/images/car10.png",
-			"pickupDate": "",
-			"returnDate": "",
-			"year": 2023,
-			"pricePerDay": "25",
-			"Gearshift": "automatic",
-			"Passengers": "5",
-			"Type": "sedan",
-			"id": "de89"
-		},
-		{
-			"_id": {
-				"$oid": "65e225d1fd0db9a13b6d4247"
-			},
-			"model": "sentra",
-			"brand": "nissan",
-			"img": "src/assets/images/car11.png",
-			"pickupDate": "",
-			"returnDate": "Sat, 30 Mar 2024",
-			"year": 2023,
-			"pricePerDay": "20",
-			"Gearshift": "manual",
-			"Passengers": "5",
-			"Type": "sedan",
-			"id": "8554"
-		},
-		{
-			"_id": {
-				"$oid": "65e225d1fd0db9a13b6d4248"
-			},
-			"model": "camry",
-			"brand": "toyota",
-			"img": "src/assets/images/car12.png",
-			"pickupDate": "",
-			"returnDate": "Mon, 15 Apr 2024",
-			"year": 2024,
-			"pricePerDay": "26",
-			"Gearshift": "automatic",
-			"Passengers": "5",
-			"Type": "sedan",
-			"id": "3ba4"
-		},
-		{
-			"_id": {
-				"$oid": "65e227a1fd0db9a13b6d424a"
-			},
-			"model": "8 series",
-			"brand": "bmw",
-			"img": "src/assets/images/car13.png",
-			"pickupDate": "",
-			"returnDate": "",
-			"year": 2024,
-			"pricePerDay": "35",
-			"Gearshift": "manual",
-			"Passengers": "4",
-			"Type": "convertible",
-			"id": "6216"
-		},
-		{
-			"_id": {
-				"$oid": "65e227a1fd0db9a13b6d424b"
-			},
-			"model": "suburban",
-			"brand": "chevrolet",
-			"img": "src/assets/images/car14.png",
-			"pickupDate": "",
-			"returnDate": "",
-			"year": 2022,
-			"pricePerDay": "32",
-			"Gearshift": "automatic",
-			"Passengers": "7",
-			"Type": "SUV",
-			"id": "67b5"
-		},
-		{
-			"_id": {
-				"$oid": "65e227a1fd0db9a13b6d424c"
-			},
-			"model": "tahoe",
-			"brand": "chevrolet",
-			"img": "src/assets/images/car15.png",
-			"pickupDate": "",
-			"returnDate": "",
-			"year": 2023,
-			"pricePerDay": "30",
-			"Gearshift": "automatic",
-			"Passengers": "7",
-			"Type": "SUV",
-			"id": "92eb"
-		},
-		{
-			"_id": {
-				"$oid": "65e227a1fd0db9a13b6d424d"
-			},
-			"model": "escalade",
-			"brand": "cadillac",
-			"img": "src/assets/images/car16.png",
-			"pickupDate": "",
-			"returnDate": "",
-			"year": 2023,
-			"pricePerDay": "29",
-			"Gearshift": "automatic",
-			"Passengers": "7",
-			"Type": "SUV",
-			"id": "8e23"
-		},
-		{
-			"_id": {
-				"$oid": "65fb76d920d81814b1f05b0f"
-			},
-			"model": "cayanne",
-			"brand": "porsche",
-			"img": "src/assets/images/suv.png",
-			"pickupDate": "",
-			"returnDate": "Sat, 30 Mar 2024",
-			"year": 2023,
-			"pricePerDay": "25",
-			"Gearshift": "manual",
-			"Passengers": "7",
-			"Type": "SUV",
-			"id": "67fa"
-		}
-	],
-	"addons": [
-		{
-			"id": "1",
-			"name": "Infant seat",
-			"price": "2.99",
-			"details": "A seat for children for up to 12 months old",
-			"img": "src/assets/images/babyseat.png"
-		},
-		{
-			"id": "2",
-			"name": "Toddler seat",
-			"price": "2.99",
-			"details": "A seat for children from 1 to 4 years old",
-			"img": "src/assets/images/babyseat.png"
-		},
-		{
-			"id": "3",
-			"name": "Gps",
-			"price": "4.99",
-			"details": "stay connected and never get lost",
-			"img": "src/assets/images/gps.png"
-		}
-	]
+  "users": [
+    {
+      "id": "1",
+      "firstName": "franco",
+      "lastName": "avena",
+      "email": "franco@email",
+      "password": "$2b$10$C/tS9OBHWO0EOVBbmcDZZuCeXsDeT31f1z5qFFT8jnc4eX0jfZcbm",
+      "bookings": [
+        {
+          "carImg": "/images/car6.png",
+          "carBrand": "bmw",
+          "carModel": "z4",
+          "pickupLocation": "Miami Int Airport",
+          "returnLocation": "Miami Int Airport",
+          "pickupDate": "Sat, 30 Mar 2024",
+          "returnDate": "Mon, 15 Apr 2024",
+          "pickupTime": "7:46 AM",
+          "returnTime": "12:46 PM",
+          "rentalDays": 16,
+          "pricePerDay": "28",
+          "totalPrice": 448,
+          "totalPlusAddons": 527.84,
+          "addons": [
+            {
+              "_id": "65d24cec323ccd0a6b05b50c",
+              "name": "Gps",
+              "price": "4.99",
+              "details": "stay connected and never get lost",
+              "img": "/images/gps.png"
+            }
+          ]
+        },
+        {
+          "carImg": "/images/car2.png",
+          "carBrand": "toyota",
+          "carModel": "rav4",
+          "pickupLocation": "Miami Int Airport",
+          "returnLocation": "Miami Int Airport",
+          "pickupDate": "Thu, 25 Apr 2024",
+          "returnDate": "Tue, 30 Apr 2024",
+          "pickupTime": "6:32 AM",
+          "returnTime": "1:32 PM",
+          "rentalDays": 5,
+          "pricePerDay": "15",
+          "totalPrice": 75,
+          "totalPlusAddons": 129.85000000000002,
+          "addons": [
+            {
+              "id": "1",
+              "name": "Infant seat",
+              "price": "2.99",
+              "details": "A seat for children for up to 12 months old",
+              "img": "/images/babyseat.png"
+            },
+            {
+              "id": "2",
+              "name": "Toddler seat",
+              "price": "2.99",
+              "details": "A seat for children from 1 to 4 years old",
+              "img": "/images/babyseat.png"
+            },
+            {
+              "id": "3",
+              "name": "Gps",
+              "price": "4.99",
+              "details": "stay connected and never get lost",
+              "img": "/images/gps.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "firstName": "mario",
+      "lastName": "avena",
+      "email": "mario@email",
+      "password": "$2b$10$y1tQQ8z9Hlu4Ht7sQVpLq.zhfpfECfQfI/RQJOmmvN9S8SgE77mZi",
+      "bookings": [
+        {
+          "carImg": "/images/car11.png",
+          "carBrand": "nissan",
+          "carModel": "sentra",
+          "pickupLocation": "Caracas Int Airport",
+          "returnLocation": "Caracas Int Airport",
+          "pickupDate": "Mon, 25 Mar 2024",
+          "returnDate": "Sat, 30 Mar 2024",
+          "pickupTime": "7:48 AM",
+          "returnTime": "4:48 PM",
+          "rentalDays": 5,
+          "pricePerDay": "20",
+          "totalPrice": 100,
+          "totalPlusAddons": 124.95,
+          "addons": [
+            {
+              "_id": "65d24cec323ccd0a6b05b50c",
+              "name": "Gps",
+              "price": "4.99",
+              "details": "stay connected and never get lost",
+              "img": "/images/gps.png"
+            }
+          ]
+        },
+        {
+          "carImg": "/images/car4.png",
+          "carBrand": "bmw",
+          "carModel": "X1",
+          "pickupLocation": "Miami Int Airport",
+          "returnLocation": "Miami Int Airport",
+          "pickupDate": "Sat, 30 Mar 2024",
+          "returnDate": "Mon, 15 Apr 2024",
+          "pickupTime": "8:06 AM",
+          "returnTime": "1:06 PM",
+          "rentalDays": 16,
+          "pricePerDay": "27",
+          "totalPrice": 432,
+          "totalPlusAddons": 607.5200000000001,
+          "addons": [
+            {
+              "_id": "65d24cec323ccd0a6b05b50b",
+              "name": "Toddler seat",
+              "price": "2.99",
+              "details": "A seat for children from 1 to 4 years old",
+              "img": "/images/babyseat.png"
+            },
+            {
+              "_id": "65d24cec323ccd0a6b05b50c",
+              "name": "Gps",
+              "price": "4.99",
+              "details": "stay connected and never get lost",
+              "img": "/images/gps.png"
+            },
+            {
+              "_id": "65d24cec323ccd0a6b05b50a",
+              "name": "Infant seat",
+              "price": "2.99",
+              "details": "A seat for children for up to 12 months old",
+              "img": "/images/babyseat.png"
+            }
+          ]
+        },
+        {
+          "carImg": "/images/car9.png",
+          "carBrand": "bentley",
+          "carModel": "continental",
+          "pickupLocation": "Caracas Int Airport",
+          "returnLocation": "Caracas Int Airport",
+          "pickupDate": "Sat, 30 Mar 2024",
+          "returnDate": "Mon, 15 Apr 2024",
+          "pickupTime": "7:54 AM",
+          "returnTime": "10:54 PM",
+          "rentalDays": 16,
+          "pricePerDay": "24",
+          "totalPrice": 384,
+          "totalPlusAddons": 463.84000000000003,
+          "addons": [
+            {
+              "_id": "65d24cec323ccd0a6b05b50c",
+              "name": "Gps",
+              "price": "4.99",
+              "details": "stay connected and never get lost",
+              "img": "/images/gps.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "firstName": "Maria",
+      "lastName": "Avena",
+      "email": "maria@email",
+      "password": "maria97",
+      "bookings": [
+        {
+          "carImg": "/images/car11.png",
+          "carBrand": "nissan",
+          "carModel": "sentra",
+          "pickupLocation": "Miami Int Airport",
+          "returnLocation": "Miami Int Airport",
+          "pickupDate": "Thu, 25 Apr 2024",
+          "returnDate": "Tue, 30 Apr 2024",
+          "pickupTime": "1:11 PM",
+          "returnTime": "6:11 AM",
+          "rentalDays": 5,
+          "pricePerDay": "20",
+          "totalPrice": 100,
+          "totalPlusAddons": 124.95,
+          "addons": [
+            {
+              "id": "3",
+              "name": "Gps",
+              "price": "4.99",
+              "details": "stay connected and never get lost",
+              "img": "/images/gps.png"
+            }
+          ]
+        },
+        {
+          "carImg": "/images/car10.png",
+          "carBrand": "bmw",
+          "carModel": "2 series",
+          "pickupLocation": "Caracas Int Airport",
+          "returnLocation": "Caracas Int Airport",
+          "pickupDate": "Wed, 01 May 2024",
+          "returnDate": "Fri, 10 May 2024",
+          "pickupTime": "1:20 PM",
+          "returnTime": "7:20 AM",
+          "rentalDays": 9,
+          "pricePerDay": "25",
+          "totalPrice": 225,
+          "totalPlusAddons": 269.91,
+          "addons": [
+            {
+              "id": "3",
+              "name": "Gps",
+              "price": "4.99",
+              "details": "stay connected and never get lost",
+              "img": "/images/gps.png"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "unregisteredUser": [
+    {
+      "id": "1",
+      "firstName": "cristiano ",
+      "lastName": "ronaldo",
+      "email": "cris@email",
+      "phone": "0987",
+      "bookings": [
+        {
+          "country": "venezuela",
+          "carImg": "/images/car2.png",
+          "carBrand": "toyota",
+          "carModel": "rav4",
+          "pickupLocation": "Miami Int Airport",
+          "returnLocation": "Caracas Int Airport",
+          "pickupDate": "Sat, 30 Mar 2024",
+          "returnDate": "Wed, 17 Apr 2024",
+          "pickupTime": "8:28 AM",
+          "returnTime": "1:28 PM",
+          "rentalDays": 18,
+          "pricePerDay": "15",
+          "totalPrice": 270,
+          "totalPlusAddons": 413.64,
+          "addons": [
+            {
+              "_id": "65d24cec323ccd0a6b05b50b",
+              "name": "Toddler seat",
+              "price": "2.99",
+              "details": "A seat for children from 1 to 4 years old",
+              "img": "/images/babyseat.png"
+            },
+            {
+              "_id": "65d24cec323ccd0a6b05b50c",
+              "name": "Gps",
+              "price": "4.99",
+              "details": "stay connected and never get lost",
+              "img": "/images/gps.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "firstName": "luka",
+      "lastName": "modric",
+      "email": "luka@email",
+      "phone": "567",
+      "bookings": [
+        {
+          "country": "venezuela",
+          "carImg": "/images/car4.png",
+          "carBrand": "bmw",
+          "carModel": "X1",
+          "pickupLocation": "Caracas Int Airport",
+          "returnLocation": "Caracas Int Airport",
+          "pickupDate": "Thu, 25 Apr 2024",
+          "returnDate": "Tue, 30 Apr 2024",
+          "pickupTime": "4:55 AM",
+          "returnTime": "12:55 PM",
+          "rentalDays": 5,
+          "pricePerDay": "27",
+          "totalPrice": 135,
+          "totalPlusAddons": 159.95,
+          "addons": [
+            {
+              "id": "3",
+              "name": "Gps",
+              "price": "4.99",
+              "details": "stay connected and never get lost",
+              "img": "/images/gps.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "firstName": "phil",
+      "lastName": "foden",
+      "email": "phil@email",
+      "phone": "567",
+      "bookings": []
+    },
+    {
+      "id": "4",
+      "firstName": "kevin",
+      "lastName": "de bruyne",
+      "email": "kevin@email",
+      "phone": "159",
+      "bookings": []
+    },
+    {
+      "id": "5",
+      "firstName": "mariquin",
+      "lastName": "cat",
+      "email": "mariquin@email",
+      "phone": "567",
+      "bookings": []
+    }
+  ],
+  "cars": [
+    {
+      "_id": {
+        "$oid": "65beda91e68ad6b5f1927d55"
+      },
+      "model": "civic",
+      "brand": "honda",
+      "img": "/images/cars.png",
+      "pickupDate": "",
+      "returnDate": "",
+      "year": "2021",
+      "pricePerDay": "15",
+      "Passengers": "5",
+      "Gearshift": "automatic",
+      "Type": "sedan",
+      "id": "c17f"
+    },
+    {
+      "_id": {
+        "$oid": "65bedbd47afaa07b69643a65"
+      },
+      "model": "corolla",
+      "brand": "toyota",
+      "img": "/images/electric.png",
+      "pickupDate": "",
+      "returnDate": "",
+      "year": 2022,
+      "pricePerDay": "10",
+      "Gearshift": "automatic",
+      "Passengers": "5",
+      "Type": "sedan",
+      "id": "afa0"
+    },
+    {
+      "_id": {
+        "$oid": "65bf03ba30a8e3851638e60e"
+      },
+      "model": "phantom",
+      "brand": "rolls royce",
+      "img": "/images/luxury.png",
+      "pickupDate": "",
+      "returnDate": "",
+      "year": 2022,
+      "pricePerDay": "40",
+      "Gearshift": "manual",
+      "Passengers": "4",
+      "Type": "convertible",
+      "id": "445f"
+    },
+    {
+      "_id": {
+        "$oid": "65e211ebfd0db9a13b6d423b"
+      },
+      "model": "camry",
+      "brand": "toyota",
+      "img": "/images/car1.png",
+      "pickupDate": "",
+      "returnDate": "",
+      "year": 2022,
+      "pricePerDay": "15",
+      "Gearshift": "manual",
+      "Passengers": "5",
+      "Type": "sedan",
+      "id": "a865"
+    },
+    {
+      "_id": {
+        "$oid": "65e211ebfd0db9a13b6d423c"
+      },
+      "model": "rav4",
+      "brand": "toyota",
+      "img": "/images/car2.png",
+      "pickupDate": "",
+      "returnDate": "",
+      "year": 2023,
+      "pricePerDay": "15",
+      "Gearshift": "automatic",
+      "Passengers": "7",
+      "Type": "SUV",
+      "id": "cb64"
+    },
+    {
+      "_id": {
+        "$oid": "65e22242fd0db9a13b6d423e"
+      },
+      "model": "blazer",
+      "brand": "chevrolet",
+      "img": "/images/car3.png",
+      "pickupDate": "",
+      "returnDate": "",
+      "year": 2023,
+      "pricePerDay": "22",
+      "Gearshift": "manual",
+      "Passengers": "5",
+      "Type": "SUV",
+      "id": "7db1"
+    },
+    {
+      "_id": {
+        "$oid": "65e22242fd0db9a13b6d423f"
+      },
+      "model": "X1",
+      "brand": "bmw",
+      "img": "/images/car4.png",
+      "pickupDate": "",
+      "returnDate": "Mon, 15 Apr 2024",
+      "year": 2021,
+      "pricePerDay": "27",
+      "Gearshift": "automatic",
+      "Passengers": "5",
+      "Type": "SUV",
+      "id": "449f"
+    },
+    {
+      "_id": {
+        "$oid": "65e22242fd0db9a13b6d4240"
+      },
+      "model": "iX",
+      "brand": "bmw",
+      "img": "/images/car5.png",
+      "pickupDate": "",
+      "returnDate": "",
+      "year": 2021,
+      "pricePerDay": "30",
+      "Gearshift": "manual",
+      "Passengers": "7",
+      "Type": "SUV",
+      "id": "4a3e"
+    },
+    {
+      "_id": {
+        "$oid": "65e22242fd0db9a13b6d4241"
+      },
+      "model": "z4",
+      "brand": "bmw",
+      "img": "/images/car6.png",
+      "pickupDate": "",
+      "returnDate": "Mon, 15 Apr 2024",
+      "year": 2020,
+      "pricePerDay": "28",
+      "Gearshift": "automatic",
+      "Passengers": "4",
+      "Type": "convertible",
+      "id": "b45b"
+    },
+    {
+      "_id": {
+        "$oid": "65e22242fd0db9a13b6d4242"
+      },
+      "model": "mustang",
+      "brand": "ford",
+      "img": "/images/car7.png",
+      "pickupDate": "",
+      "returnDate": "",
+      "year": 2022,
+      "pricePerDay": "18",
+      "Gearshift": "manual",
+      "Passengers": "4",
+      "Type": "convertible",
+      "id": "3d01"
+    },
+    {
+      "_id": {
+        "$oid": "65e22242fd0db9a13b6d4243"
+      },
+      "model": "bentayga",
+      "brand": "bentley",
+      "img": "/images/car8.png",
+      "pickupDate": "",
+      "returnDate": "",
+      "year": 2023,
+      "pricePerDay": "32",
+      "Gearshift": "automatic",
+      "Passengers": "7",
+      "Type": "SUV",
+      "id": "1151"
+    },
+    {
+      "_id": {
+        "$oid": "65e22242fd0db9a13b6d4244"
+      },
+      "model": "continental",
+      "brand": "bentley",
+      "img": "/images/car9.png",
+      "pickupDate": "",
+      "returnDate": "Mon, 15 Apr 2024",
+      "year": 2022,
+      "pricePerDay": "24",
+      "Gearshift": "manual",
+      "Passengers": "7",
+      "Type": "convertible",
+      "id": "28d4"
+    },
+    {
+      "_id": {
+        "$oid": "65e225d1fd0db9a13b6d4246"
+      },
+      "model": "2 series",
+      "brand": "bmw",
+      "img": "/images/car10.png",
+      "pickupDate": "",
+      "returnDate": "",
+      "year": 2023,
+      "pricePerDay": "25",
+      "Gearshift": "automatic",
+      "Passengers": "5",
+      "Type": "sedan",
+      "id": "de89"
+    },
+    {
+      "_id": {
+        "$oid": "65e225d1fd0db9a13b6d4247"
+      },
+      "model": "sentra",
+      "brand": "nissan",
+      "img": "/images/car11.png",
+      "pickupDate": "",
+      "returnDate": "Sat, 30 Mar 2024",
+      "year": 2023,
+      "pricePerDay": "20",
+      "Gearshift": "manual",
+      "Passengers": "5",
+      "Type": "sedan",
+      "id": "8554"
+    },
+    {
+      "_id": {
+        "$oid": "65e225d1fd0db9a13b6d4248"
+      },
+      "model": "camry",
+      "brand": "toyota",
+      "img": "/images/car12.png",
+      "pickupDate": "",
+      "returnDate": "Mon, 15 Apr 2024",
+      "year": 2024,
+      "pricePerDay": "26",
+      "Gearshift": "automatic",
+      "Passengers": "5",
+      "Type": "sedan",
+      "id": "3ba4"
+    },
+    {
+      "_id": {
+        "$oid": "65e227a1fd0db9a13b6d424a"
+      },
+      "model": "8 series",
+      "brand": "bmw",
+      "img": "/images/car13.png",
+      "pickupDate": "",
+      "returnDate": "",
+      "year": 2024,
+      "pricePerDay": "35",
+      "Gearshift": "manual",
+      "Passengers": "4",
+      "Type": "convertible",
+      "id": "6216"
+    },
+    {
+      "_id": {
+        "$oid": "65e227a1fd0db9a13b6d424b"
+      },
+      "model": "suburban",
+      "brand": "chevrolet",
+      "img": "/images/car14.png",
+      "pickupDate": "",
+      "returnDate": "",
+      "year": 2022,
+      "pricePerDay": "32",
+      "Gearshift": "automatic",
+      "Passengers": "7",
+      "Type": "SUV",
+      "id": "67b5"
+    },
+    {
+      "_id": {
+        "$oid": "65e227a1fd0db9a13b6d424c"
+      },
+      "model": "tahoe",
+      "brand": "chevrolet",
+      "img": "/images/car15.png",
+      "pickupDate": "",
+      "returnDate": "",
+      "year": 2023,
+      "pricePerDay": "30",
+      "Gearshift": "automatic",
+      "Passengers": "7",
+      "Type": "SUV",
+      "id": "92eb"
+    },
+    {
+      "_id": {
+        "$oid": "65e227a1fd0db9a13b6d424d"
+      },
+      "model": "escalade",
+      "brand": "cadillac",
+      "img": "/images/car16.png",
+      "pickupDate": "",
+      "returnDate": "",
+      "year": 2023,
+      "pricePerDay": "29",
+      "Gearshift": "automatic",
+      "Passengers": "7",
+      "Type": "SUV",
+      "id": "8e23"
+    },
+    {
+      "_id": {
+        "$oid": "65fb76d920d81814b1f05b0f"
+      },
+      "model": "cayanne",
+      "brand": "porsche",
+      "img": "/images/suv.png",
+      "pickupDate": "",
+      "returnDate": "Sat, 30 Mar 2024",
+      "year": 2023,
+      "pricePerDay": "25",
+      "Gearshift": "manual",
+      "Passengers": "7",
+      "Type": "SUV",
+      "id": "67fa"
+    }
+  ],
+  "addons": [
+    {
+      "id": "1",
+      "name": "Infant seat",
+      "price": "2.99",
+      "details": "A seat for children for up to 12 months old",
+      "img": "/images/babyseat.png"
+    },
+    {
+      "id": "2",
+      "name": "Toddler seat",
+      "price": "2.99",
+      "details": "A seat for children from 1 to 4 years old",
+      "img": "/images/babyseat.png"
+    },
+    {
+      "id": "3",
+      "name": "Gps",
+      "price": "4.99",
+      "details": "stay connected and never get lost",
+      "img": "/images/gps.png"
+    }
+  ]
 }

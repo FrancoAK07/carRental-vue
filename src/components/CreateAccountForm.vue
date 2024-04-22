@@ -53,6 +53,7 @@
 		lastName: lastName.value,
 		email: email.value,
 		password: password.value,
+		bookings: [],
 	}));
 
 	const emit = defineEmits(["login", "signInLink", "closeRegisterForm"]);

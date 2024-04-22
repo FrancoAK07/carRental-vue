@@ -90,6 +90,7 @@
 	try {
 		if (userData) {
 			axios.get(`http://localhost:5001/users/${userData.id}`).then((res) => {
+				console.log(res.data);
 				if (res.data.bookings) {
 					userBookings.value = res.data.bookings;
 				}
