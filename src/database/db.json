@@ -68,6 +68,44 @@
               "img": "/images/gps.png"
             }
           ]
+        },
+        {
+          "carImg": "/images/car3.png",
+          "carBrand": "chevrolet",
+          "carModel": "blazer",
+          "pickupLocation": "Miami Int Airport",
+          "returnLocation": "Miami Int Airport",
+          "pickupDate": "Thu, 25 Apr 2024",
+          "returnDate": "Tue, 30 Apr 2024",
+          "pickupTime": "1:32 PM",
+          "returnTime": "7:32 AM",
+          "rentalDays": 5,
+          "pricePerDay": "22",
+          "totalPrice": 110,
+          "totalPlusAddons": 164.85000000000002,
+          "addons": [
+            {
+              "id": "1",
+              "name": "Infant seat",
+              "price": "2.99",
+              "details": "A seat for children for up to 12 months old",
+              "img": "/images/babyseat.png"
+            },
+            {
+              "id": "2",
+              "name": "Toddler seat",
+              "price": "2.99",
+              "details": "A seat for children from 1 to 4 years old",
+              "img": "/images/babyseat.png"
+            },
+            {
+              "id": "3",
+              "name": "Gps",
+              "price": "4.99",
+              "details": "stay connected and never get lost",
+              "img": "/images/gps.png"
+            }
+          ]
         }
       ]
     },
