@@ -92,7 +92,6 @@
 	import axios from "axios";
 
 	axios.get("/api/users.js").then((res) => {
-		const result = res.json();
-		console.log(result);
+		console.log(res);
 	});
 </script>
