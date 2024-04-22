@@ -19,7 +19,7 @@
 							v-if="showDetails">
 							<div class="row px-3 py-3 m-0 text-center"><h1 class="m-0 p-0">Price details</h1></div>
 							<div class="row px-3 pb-1 text-nowrap w-100 mx-auto">
-								<div class="col me-5 p-0">Daily/{{ bookingInfo.car.pricePerDay }} x {{ differenceInDays }} Rental days</div>
+								<div class="col me-5 p-0">Daily/${{ bookingInfo.car.pricePerDay }} x {{ differenceInDays }} Rental days</div>
 								<div class="col text-end p-0">${{ bookingInfo.totalPrice }}</div>
 							</div>
 							<div class="row px-3 pb-1 text-nowrap w-100 mx-auto" v-for="addon of bookingInfo.selectedAddons">
