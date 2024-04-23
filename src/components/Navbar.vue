@@ -4,7 +4,6 @@
 			<router-link :to="{ path: '/' }" class="col text-decoration-none">Home</router-link>
 			<router-link :to="{ path: '/fleet' }" class="col text-decoration-none">Fleet</router-link>
 			<router-link :to="{ path: '/emailbooking' }" class="col text-decoration-none my-auto">Bookings</router-link>
-			<router-link :to="{ path: '/posts' }" class="col text-decoration-none my-auto">Posts</router-link>
 		</div>
 		<div class="row position-absolute end-0 me-2 d-none d-sm-flex">
 			<div class="col" ref="loginLink" v-show="route.path === '/'">

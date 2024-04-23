@@ -89,13 +89,4 @@
 
 <script setup>
 	import LocationDateTimeForm from "@/components/LocationDate&Time/LocationDateTimeForm.vue";
-	import axios from "axios";
-
-	axios.get("/api/user").then((res) => {
-		console.log(res.data);
-	});
-
-	axios.get("/api/car").then((res) => {
-		console.log(res.data);
-	});
 </script>
