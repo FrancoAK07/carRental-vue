@@ -91,7 +91,7 @@
 	import LocationDateTimeForm from "@/components/LocationDate&Time/LocationDateTimeForm.vue";
 	import axios from "axios";
 
-	axios.get("../../functions/api/users.js").then((res) => {
-		console.log(res);
+	axios.get("/api/users.js").then((res) => {
+		console.log(res.json());
 	});
 </script>

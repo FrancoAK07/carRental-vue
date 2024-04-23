@@ -1,5 +1,5 @@
-import users from "./user/userData.js";
+import users from "./user/userData";
 
 export function onRequestGet() {
-	return Response.json("hello world");
+	return Response.json(users);
 }
