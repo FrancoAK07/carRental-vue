@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div class="row g-0 mt-3">
-				<div class="car-column col-sm-6 col-lg-4 p-1 rounded-4" v-for="car of carsData.data">
+				<div class="car-column col-sm-6 col-lg-4 p-1 rounded-4" v-for="car of cars">
 					<div class="bg-dark rounded-4 w-100 p-3 text-white">
 						<div class="row w-100 mx-auto">
 							<h5>Brand: {{ car.brand }}</h5>
@@ -87,9 +87,7 @@
 		// carsData = await axios.get("http://localhost:5001/cars");
 		// console.log("json-server");
 		axios.get("/api/car").then((res) => {
-			console.log(res.data);
 			carsData = res;
-			console.log(carsData.data);
 		});
 	} catch (error) {
 		console.log(error);
