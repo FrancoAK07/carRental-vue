@@ -82,7 +82,7 @@
 	const typeRef = ref();
 	const passengersRef = ref();
 	let totalPrice;
-	let carsData = [];
+	let carsData;
 
 	try {
 		axios.get("/api/car").then((res) => {
@@ -94,9 +94,9 @@
 		console.log(error);
 	}
 
-	const cars = carsData;
+	const cars = ref(carsData);
 
-	console.log(cars);
+	console.log(cars.value);
 
 	//get booking info from sessionStorage
 	const bookingInfo = JSON.parse(sessionStorage.getItem("bookingInfo"));
@@ -110,7 +110,7 @@
 
 	//new array of cars available in that pickup date
 	const availableCars = ref(
-		cars.filter((car) => {
+		cars.value.filter((car) => {
 			return pickupDate > new Date(car.returnDate) || car.returnDate === "";
 		})
 	);
@@ -130,7 +130,7 @@
 	};
 
 	const resetFilter = () => {
-		availableCars.value = cars.filter((car) => {
+		availableCars.value = cars.value.filter((car) => {
 			return pickupDate > new Date(car.returnDate) || car.returnDate === "";
 		});
 		console.log("reset");
