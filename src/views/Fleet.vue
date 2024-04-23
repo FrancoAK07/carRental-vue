@@ -86,8 +86,9 @@
 	try {
 		// carsData = await axios.get("http://localhost:5001/cars");
 		// console.log("json-server");
-		carsData = axios.get("/api/car").then((res) => {
+		axios.get("/api/car").then((res) => {
 			console.log(res.data);
+			carsData = res;
 			console.log(carsData.data);
 		});
 	} catch (error) {
