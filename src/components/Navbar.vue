@@ -43,6 +43,7 @@
 <script setup>
 	import { ref, onMounted, watch } from "vue";
 	import { useRoute } from "vue-router";
+	import axios from "axios";
 
 	const loginLink = ref(null);
 	const registerLink = ref(null);
@@ -99,5 +100,9 @@
 				hamburgerMenu.value.classList.remove("hamburgerActive");
 			}
 		}
+	});
+
+	axios.get("/api/posts").then((res) => {
+		console.log(res.json());
 	});
 </script>
