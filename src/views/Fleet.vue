@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div class="row g-0 mt-3">
-				<div class="car-column col-sm-6 col-lg-4 p-1 rounded-4" v-for="car of carsData">
+				<div class="car-column col-sm-6 col-lg-4 p-1 rounded-4" v-for="car of cars">
 					<div class="bg-dark rounded-4 w-100 p-3 text-white">
 						<div class="row w-100 mx-auto">
 							<h5>Brand: {{ car.brand }}</h5>
@@ -81,23 +81,20 @@
 	import axios from "axios";
 	import LocationDateTimeForm from "@/components/LocationDate&Time/LocationDateTimeForm.vue";
 
-	let carsData = ref();
+	let cars = ref();
+	let carsData;
 
 	try {
-		// carsData = await axios.get("http://localhost:5001/cars");
-		// console.log("json-server");
 		axios.get("/api/car").then((res) => {
-			carsData.value = res.data;
-			console.log(carsData.value);
+			cars.value = res.data;
+			carsData = res.data;
+			console.log(cars.value);
 		});
 	} catch (error) {
 		console.log(error);
 		carsData = await axios.get("http://localhost:5000/cars");
 		console.log("database");
 	}
-
-	// const cars = ref(carsData);
-	// console.log(cars.value);
 
 	let priceRef = ref();
 	let typeRef = ref();
@@ -130,7 +127,7 @@
 	};
 
 	const resetFilter = () => {
-		cars.value = carsData.data;
+		cars.value = carsData;
 	};
 
 	const typeFilter = () => {
