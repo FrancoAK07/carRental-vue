@@ -24,3 +24,5 @@ const users = [
 		bookings: [],
 	},
 ];
+
+export default users;

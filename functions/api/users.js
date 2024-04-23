@@ -1,5 +1,5 @@
 import users from "./user/userData.js";
 
-export default function onRequestGet() {
-	return Response.json(users);
+export function onRequestGet() {
+	return Response.json("hello world");
 }
