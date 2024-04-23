@@ -85,13 +85,15 @@
 	let carsData = [];
 
 	try {
-		carsData = await axios.get("http://localhost:5001/cars");
+		axios.get("/api/car").then((res) => {
+			carsData = res.data;
+		});
 	} catch (error) {
 		carsData = await axios.get("http://localhost:5000/cars");
 		console.log(error);
 	}
 
-	const cars = carsData.data;
+	const cars = carsData;
 
 	console.log(cars);
 
