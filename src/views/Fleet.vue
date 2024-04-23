@@ -84,8 +84,12 @@
 	let carsData;
 
 	try {
-		carsData = await axios.get("http://localhost:5001/cars");
-		console.log("json-server");
+		// carsData = await axios.get("http://localhost:5001/cars");
+		// console.log("json-server");
+		carsData = axios.get("/api/car").then((res) => {
+			console.log(res.data);
+			console.log(carsData.data);
+		});
 	} catch (error) {
 		console.log(error);
 		carsData = await axios.get("http://localhost:5000/cars");
