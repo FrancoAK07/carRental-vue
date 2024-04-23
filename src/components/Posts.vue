@@ -5,6 +5,8 @@
 </template>
 
 <script setup>
+	import axios from "axios";
+
 	const resp = await fetch("/api/posts");
 	const postsResp = await resp.json();
 	console.log(postsResp);

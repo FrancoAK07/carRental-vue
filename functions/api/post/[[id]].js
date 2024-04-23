@@ -1,4 +1,4 @@
-import posts from "./data";
+import posts from "./users";
 
 export function onRequestGet(context) {
 	const id = context.params.id;

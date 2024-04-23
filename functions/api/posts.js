@@ -1,5 +1,5 @@
-import posts from "./post/data";
+import users from "./post/users";
 
 export function onRequestGet() {
-	return Response.json(posts);
+	return Response.json(users);
 }
