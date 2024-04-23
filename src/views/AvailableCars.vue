@@ -87,6 +87,7 @@
 	try {
 		axios.get("/api/car").then((res) => {
 			carsData = res.data;
+			console.log(res);
 		});
 	} catch (error) {
 		carsData = await axios.get("http://localhost:5000/cars");
