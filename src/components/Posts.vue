@@ -7,14 +7,12 @@
 <script setup>
 	import axios from "axios";
 
-	const resp = await fetch("/api/posts");
+	const resp = await fetch("/api/user");
 	console.log(resp);
 	const postsResp = await resp.json();
 	console.log(postsResp);
 
-	axios.get("/api/posts").then((res) => {
-		console.log(res);
-		const data = res.json();
-		console.log(data);
+	axios.get("/api/user").then((res) => {
+		console.log(res.data);
 	});
 </script>
