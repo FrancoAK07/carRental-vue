@@ -8,7 +8,6 @@ import Fleet from "../views/Fleet.vue";
 import Bookings from "../views/Bookings.vue";
 import UserCheckout from "../views/UserCheckout.vue";
 import EmailBooking from "../views/EmailBooking.vue";
-import Posts from "../components/Posts.vue";
 
 const routes = [
 	{ path: "/", component: Home, props: true },
@@ -20,7 +19,6 @@ const routes = [
 	{ path: "/bookings", name: "bookings", component: Bookings, props: true },
 	{ path: "/usercheckout", name: "usercheckout", component: UserCheckout, props: true },
 	{ path: "/emailbooking", name: "emailbooking", component: EmailBooking, props: true },
-	{ path: "/posts", name: "posts", component: Posts, props: true },
 ];
 
 const router = createRouter({
