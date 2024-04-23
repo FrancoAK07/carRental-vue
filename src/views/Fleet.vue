@@ -98,6 +98,7 @@
 	}
 
 	const cars = ref(carsData.data);
+	console.log(cars.value);
 
 	let priceRef = ref();
 	let typeRef = ref();
