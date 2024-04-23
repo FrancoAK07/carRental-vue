@@ -4,6 +4,7 @@
 			<router-link :to="{ path: '/' }" class="col text-decoration-none">Home</router-link>
 			<router-link :to="{ path: '/fleet' }" class="col text-decoration-none">Fleet</router-link>
 			<router-link :to="{ path: '/emailbooking' }" class="col text-decoration-none my-auto">Bookings</router-link>
+			<router-link :to="{ path: '/posts' }" class="col text-decoration-none my-auto">Posts</router-link>
 		</div>
 		<div class="row position-absolute end-0 me-2 d-none d-sm-flex">
 			<div class="col" ref="loginLink" v-show="route.path === '/'">
@@ -28,9 +29,6 @@
 				</div>
 				<div class="row p-1 m-auto justify-content-center">
 					<router-link :to="{ path: '/emailbooking' }" class="text-decoration-none p-0 w-auto">Bookings</router-link>
-				</div>
-				<div class="row p-1 m-auto justify-content-center">
-					<router-link :to="{ path: '/posts' }" class="text-decoration-none p-0 w-auto">Posts</router-link>
 				</div>
 				<div class="row p-1 m-auto justify-content-center" ref="loginLinkHamburger" v-show="route.path === '/'">
 					<router-link :to="{ path: '#' }" class="loginlink text-decoration-none p-0 w-auto" @click="handleLoginClick">Login</router-link>
