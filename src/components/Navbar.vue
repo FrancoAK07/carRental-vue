@@ -29,6 +29,9 @@
 				<div class="row p-1 m-auto justify-content-center">
 					<router-link :to="{ path: '/emailbooking' }" class="text-decoration-none p-0 w-auto">Bookings</router-link>
 				</div>
+				<div class="row p-1 m-auto justify-content-center">
+					<router-link :to="{ path: '/posts' }" class="text-decoration-none p-0 w-auto">Posts</router-link>
+				</div>
 				<div class="row p-1 m-auto justify-content-center" ref="loginLinkHamburger" v-show="route.path === '/'">
 					<router-link :to="{ path: '#' }" class="loginlink text-decoration-none p-0 w-auto" @click="handleLoginClick">Login</router-link>
 				</div>
