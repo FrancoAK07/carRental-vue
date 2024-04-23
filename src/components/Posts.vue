@@ -8,10 +8,12 @@
 	import axios from "axios";
 
 	const resp = await fetch("/api/posts");
+	console.log(resp);
 	const postsResp = await resp.json();
 	console.log(postsResp);
 
 	axios.get("/api/posts").then((res) => {
-		console.log(res.json());
+		const data = res.json();
+		console.log(data);
 	});
 </script>
