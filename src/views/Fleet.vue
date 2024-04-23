@@ -87,7 +87,7 @@
 		// carsData = await axios.get("http://localhost:5001/cars");
 		// console.log("json-server");
 		axios.get("/api/car").then((res) => {
-			carsData = res;
+			carsData = res.data;
 		});
 	} catch (error) {
 		console.log(error);
@@ -95,7 +95,7 @@
 		console.log("database");
 	}
 
-	const cars = ref(carsData.data);
+	const cars = ref(carsData);
 	console.log(cars.value);
 
 	let priceRef = ref();
