@@ -13,6 +13,7 @@
 	console.log(postsResp);
 
 	axios.get("/api/posts").then((res) => {
+		console.log(res);
 		const data = res.json();
 		console.log(data);
 	});
