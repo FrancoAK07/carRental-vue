@@ -83,17 +83,17 @@
 	const passengersRef = ref();
 	let totalPrice;
 	let carsData;
-	let cars = ref([]);
+	let cars;
 
 	try {
 		axios.get("/api/car").then((res) => {
-			cars.value = res.data;
+			cars = res.data;
 			console.log(res.data);
-			console.log(cars.value);
+			console.log(cars);
 		});
 	} catch (error) {
 		carsData = await axios.get("http://localhost:5000/cars");
-		cars.value = carsData.data;
+		cars = carsData.data;
 		console.log(error);
 	}
 
@@ -113,6 +113,8 @@
 			return pickupDate > new Date(car.returnDate) || car.returnDate === "";
 		})
 	);
+
+	console.log(availableCars.value);
 	//--
 
 	//filter functions

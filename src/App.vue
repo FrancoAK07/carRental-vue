@@ -55,8 +55,6 @@
 	let userLogged = ref(sessionStorage.getItem("userLogged"));
 	let user;
 
-	console.log(userLogged.value);
-
 	const closeLoginForm = () => {
 		showLoginForm.value = false;
 	};
