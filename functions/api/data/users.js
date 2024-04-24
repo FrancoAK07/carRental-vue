@@ -7,14 +7,14 @@ const users = [
 		password: "realmadrid",
 	},
 	{
-		id: "2",
+		id: 2,
 		firstName: "mario",
 		lastName: "avena",
 		email: "mario@email",
 		password: "marioesgay",
 	},
 	{
-		id: "3",
+		id: 3,
 		firstName: "maria",
 		lastName: "avena",
 		email: "maria@email",
