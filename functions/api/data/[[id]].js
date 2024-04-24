@@ -7,11 +7,11 @@ export function onRequestGet(context) {
 		return new Response("Not found", { status: 404 });
 	}
 
-	const user = users.find((user) => user.id === Number(id));
+	const post = users.find((user) => user.id === Number(id));
 
 	if (!post) {
 		return new Response("Not found", { status: 404 });
 	}
 
-	return Response.json(user);
+	return Response.json(post);
 }
