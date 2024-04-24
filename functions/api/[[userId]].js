@@ -1,4 +1,4 @@
-import users from "./data";
+import users from "./data/users";
 
 export function onRequestGet(context) {
 	const id = context.params.id;
