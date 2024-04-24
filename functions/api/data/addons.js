@@ -21,3 +21,5 @@ const addons = [
 		img: "/images/gps.png",
 	},
 ];
+
+export default addons;
