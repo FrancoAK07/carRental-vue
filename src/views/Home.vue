@@ -98,6 +98,6 @@
 	const car = await carsData.json();
 	console.log(car);
 
-	const person = await axios.get(`/api/unRegisteredUsersdata/${email}`);
+	const person = await axios.get(`/api/unRegisteredUsersdata/cris@email`);
 	console.log(person);
 </script>
