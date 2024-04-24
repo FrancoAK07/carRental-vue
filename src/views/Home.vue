@@ -94,7 +94,7 @@
 	const user = await axios.get("/api/userData/1");
 	console.log(user.data);
 
-	const carsData = await fetch("/api/carsData/1");
+	const carsData = await fetch("/api/carsData/afa0");
 	const car = await carsData.json();
 	console.log(car);
 </script>
