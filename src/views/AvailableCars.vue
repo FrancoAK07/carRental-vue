@@ -109,7 +109,7 @@
 
 	//new array of cars available in that pickup date
 	const availableCars = ref(
-		cars.value.filter((car) => {
+		cars.filter((car) => {
 			return pickupDate > new Date(car.returnDate) || car.returnDate === "";
 		})
 	);
@@ -131,7 +131,7 @@
 	};
 
 	const resetFilter = () => {
-		availableCars.value = cars.value.filter((car) => {
+		availableCars.value = cars.filter((car) => {
 			return pickupDate > new Date(car.returnDate) || car.returnDate === "";
 		});
 		console.log("reset");
