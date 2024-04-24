@@ -91,6 +91,11 @@
 	import LocationDateTimeForm from "@/components/LocationDate&Time/LocationDateTimeForm.vue";
 	import axios from "axios";
 
-	const user = await axios.get(`/api/data/1`);
+	const id = 1;
+
+	const user = await axios.get(`/api/data/${id}`);
 	console.log(user);
+
+	carsData = await axios.get("/api/car");
+	console.log(carsData);
 </script>
