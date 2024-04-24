@@ -83,11 +83,12 @@
 	const passengersRef = ref();
 	let totalPrice;
 	let carsData;
-	let cars = ref();
+	let cars = ref([]);
 
 	try {
 		axios.get("/api/car").then((res) => {
 			cars.value = res.data;
+			console.log(res.data);
 			console.log(cars.value);
 		});
 	} catch (error) {
@@ -95,8 +96,6 @@
 		cars.value = carsData.data;
 		console.log(error);
 	}
-
-	console.log(cars.value);
 
 	//get booking info from sessionStorage
 	const bookingInfo = JSON.parse(sessionStorage.getItem("bookingInfo"));
