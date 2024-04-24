@@ -10,7 +10,7 @@ const cars = [
 		Passengers: "5",
 		Gearshift: "automatic",
 		Type: "sedan",
-		id: "1",
+		id: 1,
 	},
 	{
 		model: "corolla",
