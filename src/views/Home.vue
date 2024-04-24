@@ -92,8 +92,9 @@
 	import axios from "axios";
 
 	const user = await fetch("/api/data/1");
-	console.log(user);
+	const res = await user.json();
+	console.log(res);
 
-	const carsData = await axios.get("/api/car");
-	console.log(carsData);
+	// const carsData = await axios.get("/api/car");
+	// console.log(carsData);
 </script>
