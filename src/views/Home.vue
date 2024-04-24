@@ -97,4 +97,7 @@
 	const carsData = await fetch("/api/carsData/afa0");
 	const car = await carsData.json();
 	console.log(car);
+
+	const person = await axios.get(`/api/unRegisteredUsersdata/${email}`);
+	console.log(person);
 </script>

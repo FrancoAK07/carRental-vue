@@ -96,7 +96,7 @@
 				}
 			});
 		} else {
-			let unregisteredUser = await axios.get(`http://localhost:5001/unregisteredUser?email=${email}`);
+			let unregisteredUser = await axios.get(`/api/unRegisteredUsersdata/${email}`);
 			userBookings.value = unregisteredUser.data[0].bookings;
 			console.log(userBookings.value);
 		}
