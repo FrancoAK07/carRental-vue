@@ -97,9 +97,9 @@
 			});
 		} else {
 			let unregisteredUser = await axios.get(`/api/unRegisteredUsersData/${email}`);
-			// userBookings.value = unregisteredUser.data[0].bookings;
-			// console.log(userBookings.value);
-			console.log(unregisteredUser.data);
+			userBookings.value = unregisteredUser.data.bookings;
+			console.log(userBookings.value);
+			console.log(unregisteredUser.data.bookings);
 		}
 	} catch (error) {
 		console.log(error);
