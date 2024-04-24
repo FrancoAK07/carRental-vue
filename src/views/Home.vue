@@ -93,7 +93,7 @@
 
 	const id = 1;
 
-	const user = await axios.get(`/api/data/${id}`);
+	const user = await fetch(`/api/data/${id}`);
 	console.log(user);
 
 	carsData = await axios.get("/api/car");
