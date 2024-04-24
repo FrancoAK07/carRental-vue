@@ -16,7 +16,7 @@
 // 	return Response.json(user);
 // }
 
-import posts from "./users";
+import users from "./users";
 
 export function onRequestGet(context) {
 	const id = context.params.id;
@@ -25,7 +25,7 @@ export function onRequestGet(context) {
 		return new Response("Not found", { status: 404 });
 	}
 
-	const post = posts.find((post) => post.id === Number(id));
+	const post = users.find((post) => post.id === Number(id));
 
 	if (!post) {
 		return new Response("Not found", { status: 404 });
