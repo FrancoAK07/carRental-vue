@@ -2,6 +2,7 @@ import users from "./data/users";
 
 export function onRequestGet(context) {
 	const id = context.params.id;
+	console.log(context.params.id);
 
 	if (!id) {
 		return new Response("No id", { status: 404 });
@@ -13,5 +14,5 @@ export function onRequestGet(context) {
 		return new Response("Not found", { status: 404 });
 	}
 
-	return Response.json(user);
+	return Response.json(id);
 }
