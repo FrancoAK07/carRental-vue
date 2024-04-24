@@ -1,6 +1,6 @@
 const unregisteredUsers = [
 	{
-		id: "1",
+		id: 1,
 		firstName: "cristiano",
 		lastName: "ronaldo",
 		email: "cris@email",
