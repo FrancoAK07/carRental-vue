@@ -10,7 +10,7 @@ export function onRequestGet(context) {
 	const user = users.find((user) => user.id === id);
 
 	if (!user) {
-		return new Response("Not found", { status: 404 });
+		return new Response("user not found", { status: 404 });
 	}
 
 	return Response.json(user);
