@@ -4,14 +4,14 @@ export function onRequestGet(context) {
 	const id = context.params.id;
 
 	if (!id) {
-		return new Response("Not found", { status: 404 });
+		return new Response("No id", { status: 404 });
 	}
 
-	const client = users.find((user) => user.id === Number(id));
+	const user = users.find((user) => user.id === id);
 
-	if (!client) {
-		return new Response("Not found", { status: 404 });
+	if (!user) {
+		return new Response("user not found", { status: 404 });
 	}
 
-	return Response.json(client);
+	return Response.json(user);
 }
