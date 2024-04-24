@@ -89,4 +89,7 @@
 
 <script setup>
 	import LocationDateTimeForm from "@/components/LocationDate&Time/LocationDateTimeForm.vue";
+
+	const user = await axios.get(`/api/[[userId]]/1`);
+	console.log(user);
 </script>
