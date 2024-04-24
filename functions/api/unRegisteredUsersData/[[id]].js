@@ -7,7 +7,7 @@ export function onRequestGet(context) {
 		return new Response("No id", { status: 404 });
 	}
 
-	const unRegisteredUser = unRegisteredUsers.find((unRegisteredUser) => unRegisteredUser.id === String(id));
+	const unRegisteredUser = unRegisteredUsers.find((unRegisteredUser) => unRegisteredUser.email === String(id));
 
 	if (!unRegisteredUser) {
 		return new Response("user not found", { status: 404 });
