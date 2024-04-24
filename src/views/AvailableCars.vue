@@ -83,13 +83,13 @@
 	const passengersRef = ref();
 	let totalPrice;
 	let carsData;
-	let cars = ref([]);
+	let cars;
 
 	try {
 		carsData = await axios.get("/api/car");
-		cars.value = carsData.data;
+		cars = carsData.data;
 		console.log(carsData);
-		console.log(cars.value);
+		console.log(cars);
 	} catch (error) {
 		carsData = await axios.get("http://localhost:5000/cars");
 		cars = carsData.data;
@@ -108,7 +108,7 @@
 
 	//new array of cars available in that pickup date
 	const availableCars = ref(
-		cars.value.filter((car) => {
+		cars.filter((car) => {
 			return pickupDate > new Date(car.returnDate) || car.returnDate === "";
 		})
 	);
@@ -130,7 +130,7 @@
 	};
 
 	const resetFilter = () => {
-		availableCars.value = cars.value.filter((car) => {
+		availableCars.value = cars.filter((car) => {
 			return pickupDate > new Date(car.returnDate) || car.returnDate === "";
 		});
 		console.log("reset");
