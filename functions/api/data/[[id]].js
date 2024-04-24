@@ -13,5 +13,5 @@ export function onRequestGet(context) {
 		return new Response("Not found", { status: 404 });
 	}
 
-	return Response.json(id);
+	return Response.json(context);
 }
