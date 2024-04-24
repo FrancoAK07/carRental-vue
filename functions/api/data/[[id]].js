@@ -9,7 +9,7 @@ export function onRequestGet(context) {
 
 	const client = users.find((user) => user.id === Number(id));
 
-	if (!post) {
+	if (!client) {
 		return new Response("Not found", { status: 404 });
 	}
 
