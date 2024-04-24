@@ -99,3 +99,5 @@ const unregisteredUsers = [
 		bookings: [],
 	},
 ];
+
+export default unregisteredUsers;

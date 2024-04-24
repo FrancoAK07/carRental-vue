@@ -1,4 +1,4 @@
-import cars from "./cars";
+import unRegisteredUsers from "./unRegisteredUsers";
 
 export function onRequestGet(context) {
 	const id = context.params.id;
@@ -7,11 +7,11 @@ export function onRequestGet(context) {
 		return new Response("No id", { status: 404 });
 	}
 
-	const car = cars.find((car) => car.id === String(id));
+	const unRegisteredUser = unRegisteredUsers.find((unRegisteredUser) => unRegisteredUser.id === String(id));
 
-	if (!car) {
+	if (!unRegisteredUser) {
 		return new Response("user not found", { status: 404 });
 	}
 
-	return Response.json(car);
+	return Response.json(unRegisteredUser);
 }
