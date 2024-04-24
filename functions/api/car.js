@@ -1,4 +1,4 @@
-import cars from "./data/cars";
+import cars from "./carsData/cars";
 
 export function onRequestGet() {
 	return Response.json(cars);
