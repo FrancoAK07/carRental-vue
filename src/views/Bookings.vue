@@ -99,7 +99,7 @@
 			let unregisteredUser = await axios.get(`/api/unRegisteredUsersData/${email}`);
 			// userBookings.value = unregisteredUser.data[0].bookings;
 			// console.log(userBookings.value);
-			console.log(unregisteredUser);
+			console.log(unregisteredUser.data);
 		}
 	} catch (error) {
 		console.log(error);
