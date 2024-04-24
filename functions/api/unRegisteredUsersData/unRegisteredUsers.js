@@ -1,7 +1,7 @@
 const unregisteredUsers = [
 	{
 		id: "1",
-		firstName: "cristiano ",
+		firstName: "cristiano",
 		lastName: "ronaldo",
 		email: "cris@email",
 		phone: "0987",
