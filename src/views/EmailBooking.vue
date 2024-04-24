@@ -27,8 +27,8 @@
 	let unregisteredUsers;
 
 	try {
-		users = await axios.get("http://localhost:5001/users");
-		unregisteredUsers = await axios.get("http://localhost:5001/unregisteredUser");
+		users = await axios.get("/api/user");
+		unregisteredUsers = await axios.get("/api/unRegisteredUser");
 	} catch (error) {
 		console.log(error);
 		users = await axios.get("http://localhost:5000/getUsers");
