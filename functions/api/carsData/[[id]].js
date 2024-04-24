@@ -7,7 +7,7 @@ export function onRequestGet(context) {
 		return new Response("No id", { status: 404 });
 	}
 
-	const car = cars.find((car) => car.id === id);
+	const car = cars.find((car) => car.id === String(id));
 
 	if (!car) {
 		return new Response("user not found", { status: 404 });
