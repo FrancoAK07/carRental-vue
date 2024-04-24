@@ -83,18 +83,18 @@
 	const passengersRef = ref();
 	let totalPrice;
 	let carsData;
+	let cars = ref();
 
 	try {
 		axios.get("/api/car").then((res) => {
-			carsData = res.data;
-			console.log(res);
+			cars.value = res.data;
+			console.log(cars.value);
 		});
 	} catch (error) {
 		carsData = await axios.get("http://localhost:5000/cars");
+		cars.value = carsData.data;
 		console.log(error);
 	}
-
-	const cars = ref(carsData);
 
 	console.log(cars.value);
 
