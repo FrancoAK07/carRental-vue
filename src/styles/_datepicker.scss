@@ -1,17 +1,14 @@
 .selected {
-    background-color: purple;
+	background-color: rgba(13, 110, 253);
 }
 
-
 .dates {
-  display: grid;
-  grid-template-columns: repeat(7, auto);
-  gap: 10px;
-  margin-block: 10px;
+	display: grid;
+	grid-template-columns: repeat(7, auto);
+	gap: 10px;
+	margin-block: 10px;
 }
 
 .days {
-    column-gap: 10px;
+	column-gap: 10px;
 }
-
-

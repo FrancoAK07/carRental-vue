@@ -81,7 +81,9 @@
 						</div>
 						<div class="row">
 							<div class="col-12 d-flex justify-content-center mt-3 pb-2">
-								<router-link :to="{ path: '/cars' }" class="btn bg-primary w-50 p-0"><button class="btn text-white w-100">Search</button></router-link>
+								<router-link :to="{ path: '/cars' }" class="btn bg-primary w-50 p-0"
+									><button class="btn text-white w-100">Search</button></router-link
+								>
 							</div>
 						</div>
 					</div>

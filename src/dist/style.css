@@ -70,7 +70,7 @@ input[type=date]:focus, input[type=time]:focus, input[type=text]:focus {
 }
 
 .selected {
-  background-color: purple;
+  background-color: rgb(13, 110, 253);
 }
 
 .dates {

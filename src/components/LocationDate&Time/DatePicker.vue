@@ -1,6 +1,11 @@
 <template>
 	<div class="datepicker-container p-0 w-75 border-0">
-		<input type="text" class="border w-100 px-2 rounded-start position-relative z-0" placeholder="Pickup Date" ref="dateInput" @click="displayDates()" />
+		<input
+			type="text"
+			class="border w-100 px-2 rounded-start position-relative z-0"
+			placeholder="Pickup Date"
+			ref="dateInput"
+			@click="displayDates()" />
 		<div class="position-relative"></div>
 		<div class="datepicker position-absolute bg-dark-subtle mt-1 start-0 p-3 rounded z-3" ref="datePicker" v-show="showDatePicker">
 			<!-- .datepicker-header -->
@@ -59,6 +64,7 @@
 	let selectedDate = new Date();
 	let year = selectedDate.getFullYear();
 	let month = selectedDate.getMonth();
+	let hours = selectedDate.getHours();
 	let showDatePicker = ref(false);
 	let dateInput = ref(null);
 	let monthInput = ref(null);
@@ -139,11 +145,12 @@
 
 		//get the last date of the month
 		const lastOfMonth = new Date(year, month + 1, 0);
+		console.log(selectedDate);
 
 		for (let i = 1; i <= lastOfMonth.getDate(); i++) {
 			const isToday = selectedDate.getDate() === i && selectedDate.getFullYear() === year && selectedDate.getMonth() === month;
 
-			const button = createButton(i, false, isToday);
+			const button = createButton(i, new Date(year, month, i, hours + 1) >= new Date() ? false : true, isToday);
 			button.addEventListener("click", handleDateClick);
 			dates.value.appendChild(button);
 		}
