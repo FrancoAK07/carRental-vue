@@ -26,14 +26,8 @@
 	let users;
 	let unregisteredUsers;
 
-	try {
-		users = await axios.get("/api/user");
-		unregisteredUsers = await axios.get("/api/unRegisteredUser");
-	} catch (error) {
-		console.log(error);
-		users = await axios.get("http://localhost:5000/getUsers");
-		unregisteredUsers = await axios.get("http://localhost:5000/getUnregisteredUsers");
-	}
+	users = await axios.get("http://localhost:5000/getUsers");
+	unregisteredUsers = await axios.get("http://localhost:5000/getUnregisteredUsers");
 
 	console.log(users);
 	console.log(unregisteredUsers);

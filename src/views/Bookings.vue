@@ -83,72 +83,31 @@
 
 	const toast = useToast();
 	const userData = JSON.parse(sessionStorage.getItem("user"));
+	let userBookingsData;
 	const email = sessionStorage.getItem("bookingEmail");
 	let showDetails = ref([]);
 	const userBookings = ref([]);
 
-	try {
-		if (userData) {
-			axios.get(`http://localhost:5001/users/${userData.id}`).then((res) => {
-				console.log(res.data);
-				if (res.data.bookings) {
-					userBookings.value = res.data.bookings;
-				}
-			});
-		} else {
-			let unregisteredUser = await axios.get(`/api/unRegisteredUsersData/${email}`);
-			userBookings.value = unregisteredUser.data.bookings;
-			console.log(userBookings.value);
-			console.log(unregisteredUser.data.bookings);
-		}
-	} catch (error) {
-		console.log(error);
-		if (userData) {
-			userBookings.value = await axios.get("http://localhost:5000/getUserBookings", { params: { email: userData.email } });
-		} else {
-			userBookings.value = await axios.get("http://localhost:5000/getUnregisteredUserBooking", { params: { email: email } });
-		}
+	if (userData) {
+		userBookingsData = await axios.get("http://localhost:5000/getUserBookings", { params: { email: userData.email } });
+		userBookings.value = userBookingsData.data;
+	} else {
+		userBookingsData = await axios.get("http://localhost:5000/getUnregisteredUserBooking", { params: { email: email } });
+		userBookings.value = userBookingsData.data;
 	}
 
 	async function deleteBooking(car, index) {
 		if (confirm("Are you sure you want to delete this booking?")) {
 			if (!userData) {
-				try {
-					axios.get(`http://localhost:5001/unregisteredUser?email=${email}`).then((res) => {
-						console.log(res.data);
-						res.data[0].bookings.splice(index, 1);
-						userBookings.value = res.data[0].bookings;
-						toast.error("booking deleted!");
-						axios.put(`http://localhost:5001/unregisteredUser/${res.data[0].id}`, res.data[0]).then((res) => {
-							console.log(res.data);
-						});
-					});
-				} catch (error) {
-					console.log(error);
-					await axios.post("http://localhost:5000/deleteBooking", { booking: car, email: email }).then((res) => {
-						toast.error(res.data);
-					});
-					userBookings.value = await axios.get("http://localhost:5000/getUnregisteredUserBooking", { params: { email: email } });
-				}
+				await axios.post("http://localhost:5000/deleteBooking", { booking: car, email: email }).then((res) => {
+					toast.error(res.data);
+				});
+				userBookings.value = await axios.get("http://localhost:5000/getUnregisteredUserBooking", { params: { email: email } });
 			} else {
-				try {
-					axios.get(`http://localhost:5001/users?email=${userData.email}`).then((res) => {
-						console.log(res.data);
-						res.data[0].bookings.splice(index, 1);
-						userBookings.value = res.data[0].bookings;
-						sessionStorage.setItem("user", JSON.stringify(res.data[0]));
-						toast.error("booking deleted!");
-						axios.put(`http://localhost:5001/users/${res.data[0].id}`, res.data[0]).then((res) => {
-							console.log(res.data);
-						});
-					});
-				} catch (error) {
-					console.log(error);
-					await axios.post("http://localhost:5000/deleteUserBooking", { booking: car, email: userData.email }).then((res) => {
-						toast.error(res.data);
-					});
-					userBookings.value = await axios.get("http://localhost:5000/getUserBookings", { params: { email: userData.email } });
-				}
+				await axios.post("http://localhost:5000/deleteUserBooking", { booking: car, email: userData.email }).then((res) => {
+					toast.error(res.data);
+				});
+				userBookings.value = await axios.get("http://localhost:5000/getUserBookings", { params: { email: userData.email } });
 			}
 		} else {
 			return;

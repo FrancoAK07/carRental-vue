@@ -90,27 +90,4 @@
 
 <script setup>
 	import LocationDateTimeForm from "@/components/LocationDate&Time/LocationDateTimeForm.vue";
-	import axios from "axios";
-
-	const user = await axios.get("/api/unRegisteredUser");
-	console.log(user.data);
-
-	const carsData = await fetch("/api/carsData/afa0");
-	const car = await carsData.json();
-	console.log(car);
-
-	const person = await axios.get(`/api/unRegisteredUsersData/cris@email`);
-	console.log(person);
-
-	const users = {
-		id: 4,
-		firstName: "lucky",
-		lastName: "cat",
-		email: "lucky@email",
-		password: "luckythecat",
-	};
-
-	function postUser() {
-		const post = axios.post(`/api/userPost/${users}`);
-	}
 </script>

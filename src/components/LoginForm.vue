@@ -57,37 +57,19 @@
 		if (!email.value || !password.value) {
 			toast.warning("please fill all fields");
 		} else {
-			try {
-				const loginUserRes = await axios.get(`http://localhost:5001/users?email=${email.value}`);
-				const userInfo = loginUserRes.data;
-				console.log(userInfo);
-				if (userInfo[0]) {
-					user = userInfo[0];
-					sessionStorage.setItem("user", JSON.stringify(user));
-					toast.success("logged in successfully", { timeout: 1500 });
-					emit("userLogged", user);
-					emit("clickedOut");
-					email.value = "";
-					password.value = "";
-				} else {
-					toast.warning("user not found");
-				}
-			} catch (error) {
-				console.log(error);
-				const loginUserRes = await axios.post("http://localhost:5000/login", { email: email.value, password: password.value });
-				console.log(loginUserRes.data);
-				if (loginUserRes.data.user) {
-					user = loginUserRes.data.user;
-					sessionStorage.setItem("user", JSON.stringify(user));
-					console.log(user);
-					toast.success(loginUserRes.data.message, { timeout: 1500 });
-					emit("userLogged", user);
-					emit("clickedOut");
-					email.value = "";
-					password.value = "";
-				} else {
-					toast.warning(loginUserRes.data);
-				}
+			const loginUserRes = await axios.post("http://localhost:5000/login", { email: email.value, password: password.value });
+			console.log(loginUserRes.data);
+			if (loginUserRes.data.user) {
+				user = loginUserRes.data.user;
+				sessionStorage.setItem("user", JSON.stringify(user));
+				console.log(user);
+				toast.success(loginUserRes.data.message, { timeout: 1500 });
+				emit("userLogged", user);
+				emit("clickedOut");
+				email.value = "";
+				password.value = "";
+			} else {
+				toast.warning(loginUserRes.data);
 			}
 		}
 	};

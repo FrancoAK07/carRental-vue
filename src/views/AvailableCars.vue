@@ -85,16 +85,8 @@
 	let carsData;
 	let cars;
 
-	try {
-		carsData = await axios.get("/api/car");
-		cars = carsData.data;
-		console.log(carsData);
-		console.log(cars);
-	} catch (error) {
-		carsData = await axios.get("http://localhost:5000/cars");
-		cars = carsData.data;
-		console.log(error);
-	}
+	carsData = await axios.get("http://localhost:5000/cars");
+	cars = carsData.data;
 
 	//get booking info from sessionStorage
 	const bookingInfo = JSON.parse(sessionStorage.getItem("bookingInfo"));

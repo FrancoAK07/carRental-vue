@@ -88,20 +88,14 @@
 		} else if (password.value.length < 5) {
 			toast.warning("password must be at least 5 characters long", { timeout: 3000 });
 		} else {
-			try {
-				axios.post("http://localhost:5001/users", user.value).then((res) => {
-					console.log(res.data);
-				});
-			} catch (error) {
-				axios.post("http://localhost:5000/registerUser", { user: user.value }).then((res) => {
-					toast.success(res.data);
-					emit("closeRegisterForm");
-					firstName.value = "";
-					lastName.value = "";
-					email.value = "";
-					password.value = "";
-				});
-			}
+			axios.post("http://localhost:5000/registerUser", { user: user.value }).then((res) => {
+				toast.success(res.data);
+				emit("closeRegisterForm");
+				firstName.value = "";
+				lastName.value = "";
+				email.value = "";
+				password.value = "";
+			});
 		}
 	}
 </script>
