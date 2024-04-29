@@ -102,12 +102,14 @@
 				await axios.post("http://localhost:5000/deleteBooking", { booking: car, email: email }).then((res) => {
 					toast.error(res.data);
 				});
-				userBookings.value = await axios.get("http://localhost:5000/getUnregisteredUserBooking", { params: { email: email } });
+				userBookingsData = await axios.get("http://localhost:5000/getUnregisteredUserBooking", { params: { email: email } });
+				userBookings.value = userBookingsData.data;
 			} else {
 				await axios.post("http://localhost:5000/deleteUserBooking", { booking: car, email: userData.email }).then((res) => {
 					toast.error(res.data);
 				});
-				userBookings.value = await axios.get("http://localhost:5000/getUserBookings", { params: { email: userData.email } });
+				userBookingsData = await axios.get("http://localhost:5000/getUserBookings", { params: { email: userData.email } });
+				userBookings.value = userBookingsData.data;
 			}
 		} else {
 			return;

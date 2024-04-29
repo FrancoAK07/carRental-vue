@@ -85,7 +85,6 @@
 			</div>
 		</div>
 	</div>
-	<button class="btn btn-primary" @click="postUser()">POST</button>
 </template>
 
 <script setup>

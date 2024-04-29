@@ -184,12 +184,7 @@
 
 	let nonRegisteredUsers;
 
-	try {
-		nonRegisteredUsers = await axios.get("http://localhost:5001/unregisteredUser");
-	} catch (error) {
-		console.log(error);
-		nonRegisteredUsers = await axios.get("http://localhost:5000/getUnregisteredUsers");
-	}
+	nonRegisteredUsers = await axios.get("http://localhost:5000/getUnregisteredUsers");
 
 	window.addEventListener("click", (e) => {
 		if (details.value) {
@@ -250,28 +245,11 @@
 			}
 			for (let client of nonRegisteredUsers.data) {
 				if (client.email === email.value) {
-					try {
-						axios.get(`http://localhost:5001/unregisteredUser?email=${email.value}`).then((res) => {
-							console.log(res.data);
-							res.data[0].bookings.push(userBooking.value.bookings[0]);
-							console.log("updated user", res.data);
-							axios.put(`http://localhost:5001/unregisteredUser/${res.data[0].id}`, res.data[0]).then((res) => {
-								console.log(res);
-								if (res.status === 200) {
-									toast.success("booking created successfully");
-									router.push({ path: "/" });
-								}
-							});
-						});
-						return;
-					} catch (error) {
-						console.log(error);
-						axios.post("http://localhost:5000/booking", { booking: userBooking.value.bookings[0], email: email.value }).then((res) => {
-							toast(res.data);
-							router.push({ path: "/" });
-						});
-						return;
-					}
+					axios.post("http://localhost:5000/booking", { booking: userBooking.value.bookings[0], email: email.value }).then((res) => {
+						toast(res.data);
+						router.push({ path: "/" });
+					});
+					return;
 				}
 			}
 			axios.post("http://localhost:5000/addUnregisteredUser", { client: userBooking.value });
