@@ -45,12 +45,7 @@
 	let selectedAddons = [];
 	let userIsLogged = JSON.parse(sessionStorage.getItem("user"));
 
-	try {
-		addonsData = await axios.get("/api/addon");
-	} catch (error) {
-		console.log(error);
-		addonsData = await axios.get("http://localhost:5000/addons");
-	}
+	addonsData = await axios.get("http://localhost:5000/addons");
 
 	const addons = addonsData.data;
 
