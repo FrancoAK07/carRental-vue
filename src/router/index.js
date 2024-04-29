@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import AvailableCars from "../views/AvailableCars.vue";
-import Car from "../views/Car.vue";
 import Addons from "../views/Addons.vue";
 import Checkout from "../views/Checkout.vue";
 import Fleet from "../views/Fleet.vue";
@@ -12,7 +11,6 @@ import EmailBooking from "../views/EmailBooking.vue";
 const routes = [
 	{ path: "/", component: Home, props: true },
 	{ path: "/cars", name: "cars", component: AvailableCars, props: true },
-	{ path: "/cardetails", name: "cardetails", component: Car, props: true },
 	{ path: "/addons", name: "addons", component: Addons, props: true },
 	{ path: "/checkout", name: "checkout", component: Checkout, props: true },
 	{ path: "/fleet", name: "fleet", component: Fleet, props: true },
