@@ -3,48 +3,71 @@
 	<div class="cars min-vh-100 mt-3 mb-3">
 		<div class="available-cars container">
 			<div class="row w-75 m-auto text-center">
-				<div class="col-12 col-sm-5 col-md bg-dark text-white me-1 rounded-5 p-2 d-flex justify-content-between">
-					<label for="sort">Sort by:</label>
-					<select class="filter border-0 border-dark bg-dark text-white rounded-5" name="sort" id="sort" ref="priceRef" @change="priceFilter()">
-						<option value="" selected disabled></option>
-						<option value="default">all</option>
-						<option value="lowToHigh">Price low to high</option>
-						<option value="highToLow">Price high to low</option>
-					</select>
+				<div class="col-12 col-sm-5 col-md bg-dark text-white me-1 rounded-5 p-1 d-flex justify-content-between mb-1">
+					<div class="row w-100 m-auto justify-content-center">
+						<label class="p-0" for="sort">Sort by:</label>
+						<select
+							class="filter border-0 border-dark bg-dark text-white rounded-5 text-center p-0 w-auto"
+							name="sort"
+							id="sort"
+							ref="priceRef"
+							@change="priceFilter()">
+							<option value="" selected disabled></option>
+							<option value="default">all</option>
+							<option value="lowToHigh">Price low to high</option>
+							<option value="highToLow">Price high to low</option>
+						</select>
+					</div>
 				</div>
-				<div class="col-12 col-sm-5 col-md bg-dark me-1 rounded-5 text-white p-2 d-flex justify-content-between">
-					<label for="sort">Vehicle type:</label>
-					<select
-						class="filter border-0 bg-dark text-white rounded-5"
-						name="sort"
-						id="sort"
-						ref="typeRef"
-						@change="typeFilter(), console.log(typeRef.value)">
-						<option value="" selected disabled></option>
-						<option value="default">all</option>
-						<option value="SUV">SUV</option>
-						<option value="sedan">Sedan</option>
-						<option value="convertible">convertible</option>
-					</select>
+				<div class="col-12 col-sm-5 col-md bg-dark me-1 rounded-5 text-white p-1 d-flex justify-content-between mb-1">
+					<div class="row w-100 m-auto justify-content-center">
+						<label class="p-0" for="sort">Vehicle type:</label>
+						<select
+							class="filter border-0 bg-dark text-white rounded-5 text-center p-0 w-auto"
+							name="sort"
+							id="sort"
+							ref="typeRef"
+							@change="typeFilter(), console.log(typeRef.value)">
+							<option value="" selected disabled></option>
+							<option value="default">all</option>
+							<option value="SUV">SUV</option>
+							<option value="sedan">Sedan</option>
+							<option value="convertible">convertible</option>
+						</select>
+					</div>
 				</div>
-				<div class="col-12 col-sm-5 col-md bg-dark me-1 rounded-5 text-white p-2 d-flex justify-content-between">
-					<label for="sort">Gearshift:</label>
-					<select class="filter border-0 bg-dark text-white rounded-5" name="sort" id="sort" ref="gearshiftRef" @change="gearshiftFilter()">
-						<option value="" selected disabled></option>
-						<option value="default">All</option>
-						<option value="automatic">Automatic</option>
-						<option value="manual">Manual</option>
-					</select>
+				<div class="col-12 col-sm-5 col-md bg-dark me-1 rounded-5 text-white p-1 d-flex justify-content-between mb-1">
+					<div class="row w-100 m-auto justify-content-center">
+						<label class="p-0" for="sort">Gearshift:</label>
+						<select
+							class="filter border-0 bg-dark text-white rounded-5 text-center p-0 w-auto"
+							name="sort"
+							id="sort"
+							ref="gearshiftRef"
+							@change="gearshiftFilter()">
+							<option value="" selected disabled></option>
+							<option value="default">All</option>
+							<option value="automatic">Automatic</option>
+							<option value="manual">Manual</option>
+						</select>
+					</div>
 				</div>
-				<div class="col-12 col-sm-5 col-md bg-dark rounded-5 text-white p-2 d-flex justify-content-between">
-					<label for="sort">Passengers:</label>
-					<select class="filter border-0 bg-dark text-white rounded-5" name="sort" id="sort" ref="passengersRef" @change="passengersFilter()">
-						<option value="" selected disabled></option>
-						<option value="default">all</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="7">7</option>
-					</select>
+				<div class="col-12 col-sm-5 col-md bg-dark rounded-5 text-white p-1 d-flex justify-content-between mb-1">
+					<div class="row w-100 m-auto justify-content-center">
+						<label class="p-0" for="sort">Passengers:</label>
+						<select
+							class="filter border-0 bg-dark text-white rounded-5 text-center p-0 w-auto"
+							name="sort"
+							id="sort"
+							ref="passengersRef"
+							@change="passengersFilter()">
+							<option value="" selected disabled></option>
+							<option value="default">all</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="7">7</option>
+						</select>
+					</div>
 				</div>
 			</div>
 			<div class="row g-0 mt-3">
