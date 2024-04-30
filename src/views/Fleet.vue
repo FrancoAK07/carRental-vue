@@ -3,7 +3,7 @@
 	<div class="cars min-vh-100 mt-3 mb-3">
 		<div class="available-cars container">
 			<div class="row w-75 m-auto text-center">
-				<div class="col-12 col-sm-5 col-md bg-dark text-white me-1 rounded-5 p-1 d-flex justify-content-between mb-1">
+				<div class="col-12 col-sm-5 col-md bg-dark text-white me-1 rounded-5 p-2 mb-1">
 					<div class="row w-100 m-auto justify-content-center">
 						<label class="p-0" for="sort">Sort by:</label>
 						<select
@@ -19,7 +19,7 @@
 						</select>
 					</div>
 				</div>
-				<div class="col-12 col-sm-5 col-md bg-dark me-1 rounded-5 text-white p-1 d-flex justify-content-between mb-1">
+				<div class="col-12 col-sm-5 col-md bg-dark me-1 rounded-5 text-white p-2 mb-1">
 					<div class="row w-100 m-auto justify-content-center">
 						<label class="p-0" for="sort">Vehicle type:</label>
 						<select
@@ -36,7 +36,7 @@
 						</select>
 					</div>
 				</div>
-				<div class="col-12 col-sm-5 col-md bg-dark me-1 rounded-5 text-white p-1 d-flex justify-content-between mb-1">
+				<div class="col-12 col-sm-5 col-md bg-dark me-1 rounded-5 text-white p-2 mb-1">
 					<div class="row w-100 m-auto justify-content-center">
 						<label class="p-0" for="sort">Gearshift:</label>
 						<select
@@ -52,7 +52,7 @@
 						</select>
 					</div>
 				</div>
-				<div class="col-12 col-sm-5 col-md bg-dark rounded-5 text-white p-1 d-flex justify-content-between mb-1">
+				<div class="col-12 col-sm-5 col-md bg-dark rounded-5 text-white p-2 mb-1">
 					<div class="row w-100 m-auto justify-content-center">
 						<label class="p-0" for="sort">Passengers:</label>
 						<select
