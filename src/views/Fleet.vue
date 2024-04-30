@@ -2,12 +2,12 @@
 	<div v-if="showForm" class="dark-background position-fixed bg-black opacity-75 w-100 h-100 top-0 left-0"></div>
 	<div class="cars min-vh-100 mt-3 mb-3">
 		<div class="available-cars container">
-			<div class="row w-75 m-auto text-center">
-				<div class="col-12 col-sm-5 col-md bg-dark text-white me-1 rounded-5 p-2 mb-1">
+			<div class="row w-75 m-auto text-center justify-content-center">
+				<div class="col-10 col-sm-5 col-md bg-dark text-white me-1 rounded-5 p-0 mb-1 d-flex">
 					<div class="row w-100 m-auto justify-content-center">
 						<label class="p-0" for="sort">Sort by:</label>
 						<select
-							class="filter border-0 border-dark bg-dark text-white rounded-5 text-center p-0 w-auto"
+							class="filter border-0 border-dark bg-dark text-white rounded-5 text-center p-0 w-75"
 							name="sort"
 							id="sort"
 							ref="priceRef"
@@ -19,11 +19,11 @@
 						</select>
 					</div>
 				</div>
-				<div class="col-12 col-sm-5 col-md bg-dark me-1 rounded-5 text-white p-2 mb-1">
+				<div class="col-10 col-sm-5 col-md bg-dark me-1 rounded-5 text-white p-0 mb-1 d-flex">
 					<div class="row w-100 m-auto justify-content-center">
 						<label class="p-0" for="sort">Vehicle type:</label>
 						<select
-							class="filter border-0 bg-dark text-white rounded-5 text-center p-0 w-auto"
+							class="filter border-0 bg-dark text-white rounded-5 text-center p-0 w-75"
 							name="sort"
 							id="sort"
 							ref="typeRef"
@@ -36,11 +36,11 @@
 						</select>
 					</div>
 				</div>
-				<div class="col-12 col-sm-5 col-md bg-dark me-1 rounded-5 text-white p-2 mb-1">
+				<div class="col-10 col-sm-5 col-md bg-dark me-1 rounded-5 text-white p-0 mb-1 d-flex">
 					<div class="row w-100 m-auto justify-content-center">
 						<label class="p-0" for="sort">Gearshift:</label>
 						<select
-							class="filter border-0 bg-dark text-white rounded-5 text-center p-0 w-auto"
+							class="filter border-0 border-dark bg-dark text-white rounded-5 text-center p-0 w-75"
 							name="sort"
 							id="sort"
 							ref="gearshiftRef"
@@ -52,11 +52,11 @@
 						</select>
 					</div>
 				</div>
-				<div class="col-12 col-sm-5 col-md bg-dark rounded-5 text-white p-2 mb-1">
+				<div class="col-10 col-sm-5 col-md bg-dark rounded-5 text-white p-0 mb-1 d-flex">
 					<div class="row w-100 m-auto justify-content-center">
 						<label class="p-0" for="sort">Passengers:</label>
 						<select
-							class="filter border-0 bg-dark text-white rounded-5 text-center p-0 w-auto"
+							class="filter border-0 border-dark bg-dark text-white rounded-5 text-center p-0 w-75"
 							name="sort"
 							id="sort"
 							ref="passengersRef"
