@@ -153,7 +153,7 @@
 	//filter results of locations
 	const searchResults = computed(() => {
 		if (pickupLocation.value === "") {
-			return [];
+			return locations;
 		}
 
 		return locations.filter((location) => {
@@ -163,7 +163,7 @@
 
 	const searchResults2 = computed(() => {
 		if (returnLocation.value === "") {
-			return [];
+			return locations;
 		}
 
 		return locations.filter((location) => {
