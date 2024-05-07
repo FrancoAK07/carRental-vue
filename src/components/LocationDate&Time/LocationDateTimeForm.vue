@@ -46,16 +46,9 @@
 										class="w-25 rounded-end border left"
 										type="text"
 										placeholder="time"
-										onfocus="(this.type = 'time')"
+										onfocus="(this.type = 'time', this.showPicker())"
 										onblur="(this.type = 'text')"
-										v-model="pickupTime"
-										@change="
-											{
-												{
-													console.log(pickupTime);
-												}
-											}
-										" />
+										v-model="pickupTime" />
 								</div>
 							</div>
 							<div class="col-12 p-0">
@@ -66,16 +59,9 @@
 										class="w-25 rounded-end border left"
 										type="text"
 										placeholder="time"
-										onfocus="(this.type = 'time')"
+										onfocus="(this.type = 'time'), this.showPicker()"
 										onblur="(this.type = 'text')"
-										v-model="returnTime"
-										@change="
-											{
-												{
-													console.log(returnTime);
-												}
-											}
-										" />
+										v-model="returnTime" />
 								</div>
 							</div>
 						</div>
