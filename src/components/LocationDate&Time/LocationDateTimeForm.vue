@@ -59,7 +59,7 @@
 										class="w-25 rounded-end border left"
 										type="text"
 										placeholder="time"
-										onfocus="(this.type = 'time'), this.showPicker()"
+										onfocus="(this.type = 'time', this.showPicker())"
 										onblur="(this.type = 'text')"
 										v-model="returnTime" />
 								</div>
