@@ -7,11 +7,15 @@
 				</div>
 				<div class="col-12 col-md text-center">
 					<div class="row">
-						<h1 class="d-inline m-0">Total: ${{ bookingInfo.totalPlusAddons ? bookingInfo.totalPlusAddons.toFixed(2) : bookingInfo.totalPrice }}</h1>
+						<h1 class="d-inline m-0">
+							Total: ${{ bookingInfo.totalPlusAddons ? bookingInfo.totalPlusAddons.toFixed(2) : bookingInfo.totalPrice }}
+						</h1>
 					</div>
 					<div class="row justify-content-end">
 						<div class="col-12">
-							<a class="text-decoration-none w-auto ms-auto" ref="detailsLinkRef" href="#" @click="showDetails = !showDetails">Price details</a>
+							<a class="text-decoration-none w-auto ms-auto" ref="detailsLinkRef" href="#" @click="showDetails = !showDetails"
+								>Price details</a
+							>
 						</div>
 						<div
 							ref="details"
@@ -120,18 +124,26 @@
 					</div>
 					<div class="row px-3 mx-auto">
 						<div class="col-12 fw-bold p-0">Pickup</div>
-						<div class="col-12 px-0 py-1 ms-2"><img src="../assets/images/house-icon2.png" alt="" /> {{ bookingInfo.pickupLocation }}</div>
-						<div class="col-12 pickupDate px-0 pt-1 pb-2 ms-2">Pickup date: {{ lastPickupDate.replace("04:00:00", `| ${pickupTime}`) }}</div>
+						<div class="col-12 px-0 py-1 ms-2">
+							<img src="../assets/images/house-icon2.png" alt="" /> {{ bookingInfo.pickupLocation }}
+						</div>
+						<div class="col-12 pickupDate px-0 pt-1 pb-2 ms-2">
+							Pickup date: {{ lastPickupDate.replace("04:00:00", `| ${pickupTime}`) }}
+						</div>
 						<div class="col-12 fw-bold p-0">Return</div>
 						<div class="col-12 px-0 py-1 ms-2">
 							<img src="../assets/images/house-icon2.png" alt="" />
 							{{ bookingInfo.returnLocation ? bookingInfo.returnLocation : bookingInfo.pickupLocation }}
 						</div>
-						<div class="col-12 returnDate px-0 pt-1 pb-2 ms-2">Return date: {{ lastReturnDate.replace("04:00:00", `| ${returnTime}`) }}</div>
+						<div class="col-12 returnDate px-0 pt-1 pb-2 ms-2">
+							Return date: {{ lastReturnDate.replace("04:00:00", `| ${returnTime}`) }}
+						</div>
 					</div>
 					<div class="row border-top border-light px-3 pb-2 w-100 mx-auto" v-if="bookingInfo.selectedAddons.length">
 						<h5 class="text-center m-0 pt-2 px-0">Add-ons</h5>
-						<p class="m-0 py-1 px-0" v-for="addon of bookingInfo.selectedAddons"><img :src="addon.img" alt="" /> {{ addon.name }}</p>
+						<p class="m-0 py-1 px-0" v-for="addon of bookingInfo.selectedAddons">
+							<img :src="addon.img" alt="" /> {{ addon.name }}
+						</p>
 					</div>
 				</div>
 				<div class="row justify-content-center mt-3 mb-3 mb-md-0">
@@ -245,14 +257,19 @@
 			}
 			for (let client of nonRegisteredUsers.data) {
 				if (client.email === email.value) {
-					axios.post("http://localhost:5000/booking", { booking: userBooking.value.bookings[0], email: email.value }).then((res) => {
-						toast(res.data);
-						router.push({ path: "/" });
-					});
+					axios
+						.post("http://localhost:5000/booking", { booking: userBooking.value.bookings[0], email: email.value })
+						.then((res) => {
+							toast(res.data);
+							router.push({ path: "/" });
+						});
 					return;
 				}
 			}
-			axios.post("http://localhost:5000/addUnregisteredUser", { client: userBooking.value });
+			axios.post("http://localhost:5000/addUnregisteredUser", { client: userBooking.value }).then((res) => {
+				toast(res.data);
+				router.push({ path: "/" });
+			});
 		}
 	}
 </script>
