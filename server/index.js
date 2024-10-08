@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 let connection;
 
-MongoClient.connect("mongodb://127.0.0.1/car_rental")
+MongoClient.connect("mongodb://mongo:uIyeSJpfNwykgoRunxLbWEpDtfpkoAtj@junction.proxy.rlwy.net:50367")
 	.then((client) => {
 		connection = client.db();
 		app.listen(5000, () => {
@@ -24,7 +24,7 @@ MongoClient.connect("mongodb://127.0.0.1/car_rental")
 
 app.get("/cars", (req, res) => {
 	connection
-		.collection("cars")
+		.collection("Cars")
 		.find()
 		.toArray()
 		.then((data) => {
@@ -62,7 +62,7 @@ app.post("/booking", (req, res) => {
 	try {
 		const { booking, email } = req.body;
 		connection
-			.collection("UnregisteredUser")
+			.collection("UnregisteredUsers")
 			.updateOne({ email: email }, { $push: { bookings: booking } }, { upsert: true })
 			.then((data) => {
 				console.log(data);
@@ -135,7 +135,7 @@ app.get("/getUnregisteredUserBooking", (req, res) => {
 		const email = req.query.email;
 		console.log(email);
 		connection
-			.collection("UnregisteredUser")
+			.collection("UnregisteredUsers")
 			.find({ email: email })
 			.toArray()
 			.then((data) => {
@@ -153,7 +153,7 @@ app.post("/deleteBooking", (req, res) => {
 		console.log(email);
 		console.log(booking);
 		connection
-			.collection("UnregisteredUser")
+			.collection("UnregisteredUsers")
 			.updateOne({ email: email }, { $pull: { bookings: booking } })
 			.then((data) => {
 				res.json("booking deleted");
