@@ -16,6 +16,7 @@ MongoClient.connect("mongodb://mongo:uIyeSJpfNwykgoRunxLbWEpDtfpkoAtj@junction.p
 		connection = client.db();
 		app.listen(27017, () => {
 			console.log("listening on port 27017");
+			console.log(client.db());
 		});
 	})
 	.catch((err) => {
@@ -23,12 +24,14 @@ MongoClient.connect("mongodb://mongo:uIyeSJpfNwykgoRunxLbWEpDtfpkoAtj@junction.p
 	});
 
 app.get("/cars", (req, res) => {
+	console.log("hello");
 	connection
 		.collection("Cars")
 		.find()
 		.toArray()
 		.then((data) => {
 			res.json(data);
+			console.log("data", data);
 		})
 		.catch((err) => {
 			console.log(err);
