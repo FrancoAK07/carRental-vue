@@ -11,12 +11,11 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 let connection;
 
-MongoClient.connect("mongodb://mongo:uIyeSJpfNwykgoRunxLbWEpDtfpkoAtj@junction.proxy.rlwy.net:50367")
+MongoClient.connect("mongodb://localhost:27017/car_rental")
 	.then((client) => {
 		connection = client.db();
-		app.listen(27017, () => {
-			console.log("listening on port 27017");
-			console.log(client.db());
+		app.listen(5000, () => {
+			console.log("5000");
 		});
 	})
 	.catch((err) => {
@@ -186,7 +185,7 @@ app.post("/deleteUserBooking", (req, res) => {
 app.get("/getUnregisteredUsers", (req, res) => {
 	try {
 		connection
-			.collection("UnregisteredUser")
+			.collection("UnregisteredUsers")
 			.find()
 			.toArray()
 			.then((data) => {
@@ -202,7 +201,7 @@ app.post("/addUnregisteredUser", (req, res) => {
 	const { client } = req.body;
 	try {
 		connection
-			.collection("UnregisteredUser")
+			.collection("UnregisteredUsers")
 			.insertOne(client)
 			.then((data) => {
 				console.log(data);
@@ -235,7 +234,7 @@ app.post("/carReturnDate", (req, res) => {
 	try {
 		const objectIdCarId = new ObjectId(carId);
 		connection
-			.collection("cars")
+			.collection("Cars")
 			.updateOne({ _id: objectIdCarId }, { $set: { returnDate: carReturnDate } }, { upsert: true })
 			.then((data) => {
 				console.log(data);
