@@ -14,8 +14,8 @@ let connection;
 MongoClient.connect("mongodb://mongo:uIyeSJpfNwykgoRunxLbWEpDtfpkoAtj@junction.proxy.rlwy.net:50367")
 	.then((client) => {
 		connection = client.db();
-		app.listen(50367, () => {
-			console.log("listening on port 50367");
+		app.listen(27017, () => {
+			console.log("listening on port 27017");
 		});
 	})
 	.catch((err) => {
