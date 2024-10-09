@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 let connection;
 
-MongoClient.connect("mongodb://mongo:ZXfIhlafYgmgoFJMjKtrHnlEyeJrWaJB@junction.proxy.rlwy.net:40932")
+MongoClient.connect("mongodb://mongo:ZXfIhlafYgmgoFJMjKtrHnlEyeJrWaJB@junction.proxy.rlwy.net:40932/car_rental")
 	.then((client) => {
 		connection = client.db();
 		app.listen(5000, () => {
