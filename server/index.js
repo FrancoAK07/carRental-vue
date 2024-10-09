@@ -11,10 +11,10 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 let connection;
 
-MongoClient.connect("mongodb://mongo:ZXfIhlafYgmgoFJMjKtrHnlEyeJrWaJB@junction.proxy.rlwy.net:40932/car_rental")
+MongoClient.connect("mongodb://mongo:xBodARXbsHbGNmfyiHNvoAAtxnGVfQaW@junction.proxy.rlwy.net:28416")
 	.then((client) => {
 		connection = client.db();
-		app.listen(5000, () => {
+		app.listen(5000, "0.0.0.0", () => {
 			console.log("5000");
 		});
 	})
@@ -30,7 +30,7 @@ app.get("/cars", (req, res) => {
 		.toArray()
 		.then((data) => {
 			res.json(data);
-			console.log("data", data);
+			console.log("data", connection.collection("Cars"));
 		})
 		.catch((err) => {
 			console.log(err);
