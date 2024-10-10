@@ -113,8 +113,9 @@
 	let carsData;
 	let data;
 
-	// data = await axios.get("carrental-vue-server-production.up.railway.app/cars");
-	data = await axios.get("http://localhost:27017/cars");
+	data = await axios.get("https://carrental-vue-server-production.up.railway.app/cars");
+	let response = await axios.get("https://carrental-vue-server-production.up.railway.app/test");
+	console.log(response);
 	carsData = data.data;
 	cars.value = carsData;
 	console.log(data);
