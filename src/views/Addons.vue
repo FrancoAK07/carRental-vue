@@ -23,7 +23,9 @@
 				<h1 class="w-auto m-0">Total: ${{ totalPrice.toFixed(2) }}</h1>
 			</div>
 			<div class="col-12 col-md d-flex justify-content-center">
-				<router-link :to="{ path: checkoutPath }" class="btn btn-primary w-auto my-auto" @click="saveToSessionStorage()"> Continue </router-link>
+				<router-link :to="{ path: checkoutPath }" class="btn btn-primary w-auto my-auto" @click="saveToSessionStorage()">
+					Continue
+				</router-link>
 			</div>
 		</div>
 	</div>
@@ -45,7 +47,7 @@
 	let selectedAddons = [];
 	let userIsLogged = JSON.parse(sessionStorage.getItem("user"));
 
-	addonsData = await axios.get("http://localhost:5000/addons");
+	addonsData = await axios.get("https://carrental-vue-server-production.up.railway.app/addons");
 
 	const addons = addonsData.data;
 

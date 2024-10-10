@@ -92,7 +92,9 @@
 						<div class="row w-100 mx-auto">
 							<h5>${{ car.pricePerDay }}/Day</h5>
 							<h5>Total: {{ parseInt(car.pricePerDay) * differenceInDays }}$</h5>
-							<router-link :to="{ path: '/addons' }" class="btn btn-primary w-50 m-auto" @click="bookCar(car)"> Book Now </router-link>
+							<router-link :to="{ path: '/addons' }" class="btn btn-primary w-50 m-auto" @click="bookCar(car)">
+								Book Now
+							</router-link>
 						</div>
 					</div>
 				</div>
@@ -113,7 +115,7 @@
 	let carsData;
 	let cars;
 
-	carsData = await axios.get("http://localhost:5000/cars");
+	carsData = await axios.get("https://carrental-vue-server-production.up.railway.app/cars");
 	cars = carsData.data;
 
 	//get booking info from sessionStorage

@@ -2,12 +2,16 @@
 	<div class="min-vh-100">
 		<h1 class="text-center border-bottom">Your Bookings</h1>
 		<div class="container mb-2">
-			<h1 class="position-absolute top-50 start-50 translate-middle text-nowrap" v-if="userBookings.length === 0 || !userBookings">
+			<h1
+				class="position-absolute top-50 start-50 translate-middle text-nowrap"
+				v-if="userBookings.length === 0 || !userBookings">
 				You dont have any active bookings
 			</h1>
 			<div v-for="(car, index) in userBookings" class="border-hover rounded p-1 w-75 mx-auto">
 				<div class="row bg-dark rounded w-100 mx-auto position-relative p-2">
-					<div class="delete-icon position-absolute text-white w-auto p-0 rounded-5 d-flex z-1" @click="deleteBooking(car, index)">
+					<div
+						class="delete-icon position-absolute text-white w-auto p-0 rounded-5 d-flex z-1"
+						@click="deleteBooking(car, index)">
 						<img class="bg-secondary rounded-5" src="../assets/images/trashcan2.png" alt="" />
 					</div>
 					<div class="col-12 col-md-6 position-relative my-auto">
@@ -49,7 +53,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="details-link text-decoration-none text-center link-primary w-auto m-auto" @click="showDetailsClick($event, index)">
+					<div
+						class="details-link text-decoration-none text-center link-primary w-auto m-auto"
+						@click="showDetailsClick($event, index)">
 						More Details
 					</div>
 					<div class="booking-details col-12 text-white p-0" v-if="showDetails[index]">
@@ -89,26 +95,41 @@
 	const userBookings = ref([]);
 
 	if (userData) {
-		userBookingsData = await axios.get("http://localhost:5000/getUserBookings", { params: { email: userData.email } });
+		userBookingsData = await axios.get("https://carrental-vue-server-production.up.railway.app/getUserBookings", {
+			params: { email: userData.email },
+		});
 		userBookings.value = userBookingsData.data;
 	} else {
-		userBookingsData = await axios.get("http://localhost:5000/getUnregisteredUserBooking", { params: { email: email } });
+		userBookingsData = await axios.get("https://carrental-vue-server-production.up.railway.app/getUnregisteredUserBooking", {
+			params: { email: email },
+		});
 		userBookings.value = userBookingsData.data;
 	}
 
 	async function deleteBooking(car, index) {
 		if (confirm("Are you sure you want to delete this booking?")) {
 			if (!userData) {
-				await axios.post("http://localhost:5000/deleteBooking", { booking: car, email: email }).then((res) => {
-					toast.error(res.data);
+				await axios
+					.post("https://carrental-vue-server-production.up.railway.app/deleteBooking", { booking: car, email: email })
+					.then((res) => {
+						toast.error(res.data);
+					});
+				userBookingsData = await axios.get("https://carrental-vue-server-production.up.railway.app/getUnregisteredUserBooking", {
+					params: { email: email },
 				});
-				userBookingsData = await axios.get("http://localhost:5000/getUnregisteredUserBooking", { params: { email: email } });
 				userBookings.value = userBookingsData.data;
 			} else {
-				await axios.post("http://localhost:5000/deleteUserBooking", { booking: car, email: userData.email }).then((res) => {
-					toast.error(res.data);
+				await axios
+					.post("https://carrental-vue-server-production.up.railway.app/deleteUserBooking", {
+						booking: car,
+						email: userData.email,
+					})
+					.then((res) => {
+						toast.error(res.data);
+					});
+				userBookingsData = await axios.get("https://carrental-vue-server-production.up.railway.app/getUserBookings", {
+					params: { email: userData.email },
 				});
-				userBookingsData = await axios.get("http://localhost:5000/getUserBookings", { params: { email: userData.email } });
 				userBookings.value = userBookingsData.data;
 			}
 		} else {
