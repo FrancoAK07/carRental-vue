@@ -7,7 +7,7 @@ import bcrypt from "bcrypt";
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: ["http://localhost:5173", "https://carrental-vue-production.up.railway.app"] }));
 app.use(bodyParser.urlencoded({ extended: false }));
 let connection;
 

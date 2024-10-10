@@ -113,10 +113,10 @@
 	let carsData;
 	let data;
 
-	data = await axios.get("http://carrental-vue-copy-production.up.railway.app:27017/cars");
+	data = await axios.get("carrental-vue-server-production.up.railway.app/cars");
 	carsData = data.data;
 	cars.value = carsData;
-	console.log(data.data);
+	console.log(data);
 
 	let priceRef = ref();
 	let typeRef = ref();
