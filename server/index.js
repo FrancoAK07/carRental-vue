@@ -14,7 +14,7 @@ let connection;
 MongoClient.connect("mongodb://mongo:xBodARXbsHbGNmfyiHNvoAAtxnGVfQaW@junction.proxy.rlwy.net:28416")
 	.then((client) => {
 		connection = client.db();
-		app.listen(27017, "0.0.0.0", () => {
+		app.listen(27017, () => {
 			console.log("27017");
 		});
 	})
