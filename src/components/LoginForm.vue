@@ -13,7 +13,8 @@
 			</div>
 			<div class="row w-100 mx-auto text-center">
 				<p class="m-0 p-0">
-					Don't have an account? Register <a ref="createAccountLink" class="text-decoration-none" href="#" @click="emit('createAccount')">Here</a>
+					Don't have an account? Register
+					<a ref="createAccountLink" class="text-decoration-none" href="#" @click="emit('createAccount')">Here</a>
 				</p>
 			</div>
 		</div>
@@ -57,7 +58,10 @@
 		if (!email.value || !password.value) {
 			toast.warning("please fill all fields");
 		} else {
-			const loginUserRes = await axios.post("http://localhost:5000/login", { email: email.value, password: password.value });
+			const loginUserRes = await axios.post("https://carrental-vue-server-production.up.railway.app/login", {
+				email: email.value,
+				password: password.value,
+			});
 			console.log(loginUserRes.data);
 			if (loginUserRes.data.user) {
 				user = loginUserRes.data.user;
