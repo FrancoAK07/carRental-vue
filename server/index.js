@@ -7,13 +7,23 @@ import bcrypt from "bcrypt";
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: ["http://localhost:5173", "https://carrental-vue-production.up.railway.app"] }));
+app.use(
+	cors({
+		origin: [
+			"http://localhost:5173",
+			"https://carrental-vue-production.up.railway.app",
+			"https://car-rental-vue-ruby.vercel.app",
+		],
+		methods: ["GET", "POST", "PUT", "DELETE"],
+		credentials: true,
+	})
+);
 app.use(bodyParser.urlencoded({ extended: false }));
 let connection;
 
-MongoClient.connect("mongodb://mongo:xBodARXbsHbGNmfyiHNvoAAtxnGVfQaW@junction.proxy.rlwy.net:28416")
+MongoClient.connect("mongodb://mongo:wrLzDekcttFxCYVlRAvVYlKVxGCvfEhY@junction.proxy.rlwy.net:26187")
 	.then((client) => {
-		connection = client.db();
+		connection = client.db("car_rental");
 		app.listen(27017, () => {
 			console.log("27017");
 		});
@@ -23,18 +33,19 @@ MongoClient.connect("mongodb://mongo:xBodARXbsHbGNmfyiHNvoAAtxnGVfQaW@junction.p
 	});
 
 app.get("/cars", (req, res) => {
-	console.log("hello");
-	connection
-		.collection("Cars")
-		.find()
-		.toArray()
-		.then((data) => {
-			res.json(data);
-			console.log("data", connection.collection("Cars"));
-		})
-		.catch((err) => {
-			console.log(err);
-		});
+	try {
+		console.log("before connection");
+		connection
+			.collection("Cars")
+			.find()
+			.toArray()
+			.then((data) => {
+				res.json(data);
+			});
+		console.log("after connection");
+	} catch (error) {
+		console.log(error);
+	}
 });
 
 app.get("/addons", (req, res) => {
