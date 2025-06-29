@@ -21,16 +21,38 @@ app.use(
 app.use(bodyParser.urlencoded({ extended: false }));
 let connection;
 
-MongoClient.connect("mongodb+srv://francorivo7:oXHfOrOOlRoI5pca@cluster0.wcvrqfq.mongodb.net/")
-	.then((client) => {
+// MongoClient.connect("mongodb+srv://francorivo7:oXHfOrOOlRoI5pca@cluster0.wcvrqfq.mongodb.net/")
+// 	.then((client) => {
+// 		connection = client.db("car_rental_aiven");
+// 		app.listen(3000, () => {
+// 			console.log("3000");
+// 		});
+// 	})
+// 	.catch((err) => {
+// 		console.log(err);
+// 	});
+
+const startServer = async () => {
+	try {
+		const client = await MongoClient.connect("mongodb+srv://francorivo7:oXHfOrOOlRoI5pca@cluster0.wcvrqfq.mongodb.net/");
 		connection = client.db("car_rental_aiven");
 		app.listen(3000, () => {
 			console.log("3000");
 		});
-	})
-	.catch((err) => {
-		console.log(err);
-	});
+	} catch (error) {
+		console.error("Failed to connect to the database:", error);
+	}
+};
+
+process.on("SIGINT", async () => {
+	if (connection) {
+		await connection.close();
+		console.log("Database connection closed.");
+	}
+	process.exit(0);
+});
+
+startServer();
 
 app.get("/cars", (req, res) => {
 	try {
