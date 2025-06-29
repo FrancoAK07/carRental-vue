@@ -21,11 +21,11 @@ app.use(
 app.use(bodyParser.urlencoded({ extended: false }));
 let connection;
 
-MongoClient.connect("mongodb://mongo:wrLzDekcttFxCYVlRAvVYlKVxGCvfEhY@junction.proxy.rlwy.net:26187")
+MongoClient.connect("mongodb+srv://francorivo7:oXHfOrOOlRoI5pca@cluster0.wcvrqfq.mongodb.net/")
 	.then((client) => {
-		connection = client.db("car_rental");
-		app.listen(27017, () => {
-			console.log("27017");
+		connection = client.db("car_rental_aiven");
+		app.listen(3000, () => {
+			console.log("3000");
 		});
 	})
 	.catch((err) => {
