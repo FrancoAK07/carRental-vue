@@ -97,7 +97,6 @@
 	//get booking info from sessionStorage
 	const bookingInfo = JSON.parse(sessionStorage.getItem("bookingInfo"));
 	const user = JSON.parse(sessionStorage.getItem("user"));
-	console.log(bookingInfo.car._id);
 	//--
 	const router = useRouter();
 	const toast = useToast();

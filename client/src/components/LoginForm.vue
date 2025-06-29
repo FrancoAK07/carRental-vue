@@ -62,11 +62,9 @@
 				email: email.value,
 				password: password.value,
 			});
-			console.log(loginUserRes.data);
 			if (loginUserRes.data.user) {
 				user = loginUserRes.data.user;
 				sessionStorage.setItem("user", JSON.stringify(user));
-				console.log(user);
 				toast.success(loginUserRes.data.message, { timeout: 1500 });
 				emit("userLogged", user);
 				emit("clickedOut");

@@ -37,7 +37,6 @@
 
 	//get booking info from sessionStorage
 	const bookingInfo = JSON.parse(sessionStorage.getItem("bookingInfo"));
-	console.log(bookingInfo);
 	//--
 
 	let details = [false, false];
@@ -51,8 +50,6 @@
 
 	const addons = addonsData.data;
 
-	console.log(addons);
-
 	//handle next route path
 	const checkoutPath = computed(() => {
 		if (userIsLogged) {
@@ -63,17 +60,11 @@
 	});
 	//--
 
-	console.log(addons);
-
 	let pickupDate = new Date(bookingInfo.pickupDate);
 	let returnDate = new Date(bookingInfo.returnDate);
 	let totalPrice = ref(bookingInfo.totalPrice);
-	console.log("totalPrice", bookingInfo.totalPrice);
 
-	onMounted(() => {
-		console.log(linkRef.value);
-		console.log(checkedRef.value);
-	});
+	onMounted(() => {});
 
 	const displayDetails = (index) => {
 		details[index] = !details[index];
@@ -97,7 +88,6 @@
 				return item.name !== addon.name;
 			});
 		}
-		console.log(selectedAddons);
 	};
 
 	function saveToSessionStorage() {

@@ -37,7 +37,7 @@ const startServer = async () => {
 		const client = await MongoClient.connect("mongodb+srv://francorivo7:oXHfOrOOlRoI5pca@cluster0.wcvrqfq.mongodb.net/");
 		connection = client.db("car_rental_aiven");
 		app.listen(3000, () => {
-			console.log("3000");
+			console.log(" listening on port: 3000");
 		});
 	} catch (error) {
 		console.error("Failed to connect to the database:", error);
@@ -56,7 +56,6 @@ startServer();
 
 app.get("/cars", (req, res) => {
 	try {
-		console.log("before connection");
 		connection
 			.collection("Cars")
 			.find()
@@ -64,7 +63,6 @@ app.get("/cars", (req, res) => {
 			.then((data) => {
 				res.json(data);
 			});
-		console.log("after connection");
 	} catch (error) {
 		console.log(error);
 	}
@@ -100,7 +98,6 @@ app.post("/booking", (req, res) => {
 			.collection("UnregisteredUsers")
 			.updateOne({ email: email }, { $push: { bookings: booking } }, { upsert: true })
 			.then((data) => {
-				console.log(data);
 				res.json("booked successfully!");
 			});
 	} catch (error) {
@@ -152,7 +149,6 @@ app.post("/login", (req, res) => {
 app.get("/getUserBookings", (req, res) => {
 	try {
 		const email = req.query.email;
-		console.log(email);
 		connection
 			.collection("Users")
 			.find({ email: email })
@@ -168,13 +164,11 @@ app.get("/getUserBookings", (req, res) => {
 app.get("/getUnregisteredUserBooking", (req, res) => {
 	try {
 		const email = req.query.email;
-		console.log(email);
 		connection
 			.collection("UnregisteredUsers")
 			.find({ email: email })
 			.toArray()
 			.then((data) => {
-				console.log(data[0].bookings);
 				res.json(data[0].bookings);
 			});
 	} catch (error) {
@@ -185,8 +179,6 @@ app.get("/getUnregisteredUserBooking", (req, res) => {
 app.post("/deleteBooking", (req, res) => {
 	try {
 		const { email, booking } = req.body;
-		console.log(email);
-		console.log(booking);
 		connection
 			.collection("UnregisteredUsers")
 			.updateOne({ email: email }, { $pull: { bookings: booking } })
@@ -202,12 +194,10 @@ app.post("/deleteUserBooking", (req, res) => {
 	try {
 		const booking = req.body.booking;
 		const email = req.body.email;
-		console.log(booking);
 		connection
 			.collection("Users")
 			.updateOne({ email: email }, { $pull: { bookings: booking } })
 			.then((data) => {
-				console.log(data);
 				res.json("booking deleted");
 			});
 	} catch (error) {
@@ -222,7 +212,6 @@ app.get("/getUnregisteredUsers", (req, res) => {
 			.find()
 			.toArray()
 			.then((data) => {
-				console.log(data);
 				res.json(data);
 			});
 	} catch (error) {
@@ -237,7 +226,6 @@ app.post("/addUnregisteredUser", (req, res) => {
 			.collection("UnregisteredUsers")
 			.insertOne(client)
 			.then((data) => {
-				console.log(data);
 				res.json("booked successfully!");
 			});
 	} catch (error) {
@@ -252,7 +240,6 @@ app.get("/getUsers", (req, res) => {
 			.find()
 			.toArray()
 			.then((data) => {
-				console.log(data);
 				res.json(data);
 			});
 	} catch (error) {
@@ -262,15 +249,12 @@ app.get("/getUsers", (req, res) => {
 
 app.post("/carReturnDate", (req, res) => {
 	const { carReturnDate, carId } = req.body;
-	console.log(carId);
-	console.log(carReturnDate);
 	try {
 		const objectIdCarId = new ObjectId(carId);
 		connection
 			.collection("Cars")
 			.updateOne({ _id: objectIdCarId }, { $set: { returnDate: carReturnDate } }, { upsert: true })
 			.then((data) => {
-				console.log(data);
 				res.json("return date saved successfully");
 			});
 	} catch (error) {

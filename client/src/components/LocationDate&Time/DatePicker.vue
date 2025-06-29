@@ -7,7 +7,10 @@
 			ref="dateInput"
 			@click="displayDates()" />
 		<div class="position-relative"></div>
-		<div class="datepicker position-absolute bg-dark-subtle mt-1 start-0 p-3 rounded z-3" ref="datePicker" v-show="showDatePicker">
+		<div
+			class="datepicker position-absolute bg-dark-subtle mt-1 start-0 p-3 rounded z-3"
+			ref="datePicker"
+			v-show="showDatePicker">
 			<!-- .datepicker-header -->
 			<div class="datepicker-header row w-100 mx-auto">
 				<button class="prev col btn btn-primary" @click="prevMonth()">Prev</button>
@@ -80,7 +83,6 @@
 			month: "2-digit",
 			day: "2-digit",
 		});
-		console.log(dateInput.value.value);
 		showDatePicker.value = false;
 
 		emit("pickupDate", dateInput.value.value);
@@ -145,7 +147,6 @@
 
 		//get the last date of the month
 		const lastOfMonth = new Date(year, month + 1, 0);
-		console.log(selectedDate);
 
 		for (let i = 1; i <= lastOfMonth.getDate(); i++) {
 			const isToday = selectedDate.getDate() === i && selectedDate.getFullYear() === year && selectedDate.getMonth() === month;

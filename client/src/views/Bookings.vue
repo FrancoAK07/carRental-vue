@@ -136,7 +136,6 @@
 	}
 
 	function showDetailsClick(e, index) {
-		console.log(showDetails.value);
 		showDetails.value[index] = !showDetails.value[index];
 		if (showDetails.value[index]) {
 			e.target.innerHTML = "Close Details";

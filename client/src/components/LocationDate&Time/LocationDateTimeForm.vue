@@ -12,25 +12,49 @@
 								<div class="row w-100 mx-auto px-2">
 									<div class="col-12 col-md p-0 fw-bold">Pickup and Return Location</div>
 									<div class="col-12 col-md p-0 d-flex text-nowrap">
-										<input class="h-100 me-1" type="checkbox" id="pickupLocation" name="pickupLocation" ref="checkbox" @click="checkIfChecked" />
+										<input
+											class="h-100 me-1"
+											type="checkbox"
+											id="pickupLocation"
+											name="pickupLocation"
+											ref="checkbox"
+											@click="checkIfChecked" />
 										<label class="w-auto my-auto p-0" for="pickupLocation">Same return location</label>
 									</div>
 								</div>
 								<div class="row w-100 mx-auto my-2" ref="locationsDiv">
-									<input class="rounded border" type="text" placeholder="Pickup Location" @click="changeShowLocations()" v-model="pickupLocation" />
+									<input
+										class="rounded border"
+										type="text"
+										placeholder="Pickup Location"
+										@click="changeShowLocations()"
+										v-model="pickupLocation" />
 									<div class="position-relative mt-2">
 										<ul class="rounded m-0 p-0 bg-dark-subtle position-absolute w-100 start-0 z-3" v-show="showLocations">
-											<div class="location rounded py-1 px-2" v-for="location in searchResults" :key="location" @click="setSelected(location)">
+											<div
+												class="location rounded py-1 px-2"
+												v-for="location in searchResults"
+												:key="location"
+												@click="setSelected(location)">
 												{{ location }}
 											</div>
 										</ul>
 									</div>
 								</div>
 								<div class="row w-100 mx-auto my-2" ref="locationsDiv2" v-if="!showReturnLocation">
-									<input class="rounded border" type="text" placeholder="Return Location" @click="changeShowLocations2()" v-model="returnLocation" />
+									<input
+										class="rounded border"
+										type="text"
+										placeholder="Return Location"
+										@click="changeShowLocations2()"
+										v-model="returnLocation" />
 									<div class="position-relative mt-2">
 										<ul class="rounded m-0 p-0 bg-dark-subtle position-absolute w-100 start-0 z-3" v-show="showLocations2">
-											<div class="location rounded py-1 px-2" v-for="location in searchResults2" :key="location" @click="setSelected2(location)">
+											<div
+												class="location rounded py-1 px-2"
+												v-for="location in searchResults2"
+												:key="location"
+												@click="setSelected2(location)">
 												{{ location }}
 											</div>
 										</ul>
@@ -125,14 +149,12 @@
 	//get pickup date from DatePicker component
 	function getPickupDate(pickup) {
 		pickupDate.value = pickup;
-		console.log(pickupDate.value);
 	}
 	//--
 
 	//get the return date from ReturnDatePicker component
 	function getReturnDate(returndate) {
 		returnDate.value = returndate;
-		console.log(returnDate.value);
 	}
 	//--
 
@@ -182,7 +204,6 @@
 
 	//show return location input if the return location is not the same
 	function checkIfChecked() {
-		console.log(checkbox.value.checked);
 		showReturnLocation.value = checkbox.value.checked;
 	}
 	//--
@@ -194,15 +215,16 @@
 				alert("Please enter a pickup and return date");
 				next(false);
 			} else if (new Date(pickupDate.value) >= new Date(returnDate.value)) {
-				console.log(new Date(pickupDate.value) > new Date(returnDate.value));
 				alert("invalid dates");
 				next(false);
 			} else if (checkbox.value.checked && !locations.includes(pickupLocation.value)) {
 				alert("please choose a valid pickup location");
 				next(false);
-			} else if (!checkbox.value.checked && !locations.includes(pickupLocation.value) && !locations.includes(returnLocation.value)) {
-				console.log(!locations.includes(pickupLocation.value));
-				console.log(!locations.includes(returnLocation.value));
+			} else if (
+				!checkbox.value.checked &&
+				!locations.includes(pickupLocation.value) &&
+				!locations.includes(returnLocation.value)
+			) {
 				alert("please choose a valid pickup and return location");
 				next(false);
 			} else if (!pickupTime.value || !returnTime.value) {

@@ -4,19 +4,7 @@
 			<h3 class="text-center">Create Account</h3>
 			<div class="row w-100 mx-auto mb-3">
 				<label class="fw-bold" for="email">First Name</label>
-				<input
-					class="w-100 border-0 mb-2"
-					type="text"
-					name="firstname"
-					placeholder="First Name"
-					v-model="firstName"
-					@change="
-						{
-							{
-								console.log(firstName);
-							}
-						}
-					" />
+				<input class="w-100 border-0 mb-2" type="text" name="firstname" placeholder="First Name" v-model="firstName" />
 				<label class="fw-bold" for="email">Last Name</label>
 				<input class="w-100 border-0 mb-2" type="text" name="lastname" placeholder="Last Name" v-model="lastName" />
 				<label class="fw-bold" for="email">Email</label>

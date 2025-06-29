@@ -7,7 +7,10 @@
 			ref="returnDateInput"
 			@click="displayDates()" />
 		<div class="position-relative"></div>
-		<div class="datepicker position-absolute bg-dark-subtle mt-1 start-0 p-3 rounded z-3" ref="datePicker" v-show="showReturnDatePicker">
+		<div
+			class="datepicker position-absolute bg-dark-subtle mt-1 start-0 p-3 rounded z-3"
+			ref="datePicker"
+			v-show="showReturnDatePicker">
 			<!-- .datepicker-header -->
 			<div class="datepicker-header row w-100 mx-auto">
 				<button class="prev col btn btn-primary" @click="prevMonth()">Prev</button>
@@ -79,7 +82,6 @@
 			month: "2-digit",
 			day: "2-digit",
 		});
-		console.log(returnDateInput.value.value);
 		showReturnDatePicker.value = false;
 		emit("returnDate", returnDateInput.value.value);
 	};

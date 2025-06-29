@@ -66,15 +66,11 @@
 	const loginClick = () => {
 		showLoginForm.value = !showLoginForm.value;
 		showCreateAccountForm.value = false;
-		console.log(showLoginForm.value);
-		console.log(showCreateAccountForm.value);
 	};
 
 	const registerClick = () => {
 		showCreateAccountForm.value = !showCreateAccountForm.value;
 		showLoginForm.value = false;
-		console.log(showCreateAccountForm.value);
-		console.log(showLoginForm.value);
 	};
 
 	const getLoginLink = (loginlink) => {
@@ -116,11 +112,9 @@
 
 	const loginLinkHamburger = (loginhamburger) => {
 		loginHamburger.value = loginhamburger;
-		console.log(loginhamburger);
 	};
 
 	const registerLinkHamburger = (registerhamburger) => {
 		registerHamburger.value = registerhamburger;
-		console.log(registerHamburger.value);
 	};
 </script>

@@ -27,7 +27,7 @@
 							name="sort"
 							id="sort"
 							ref="typeRef"
-							@change="typeFilter(), console.log(typeRef.value)">
+							@change="typeFilter()">
 							<option value="" selected disabled></option>
 							<option value="default">all</option>
 							<option value="SUV">SUV</option>
@@ -116,7 +116,6 @@
 	data = await axios.get("https://carrental-vue.onrender.com/cars");
 	carsData = data.data;
 	cars.value = carsData;
-	console.log(data);
 
 	let priceRef = ref();
 	let typeRef = ref();

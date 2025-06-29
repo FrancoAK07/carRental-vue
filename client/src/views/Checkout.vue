@@ -56,7 +56,6 @@
 								@change="
 									{
 										{
-											console.log(userBooking);
 											userBooking.firstName = firstName;
 										}
 									}
@@ -104,7 +103,6 @@
 									{
 										{
 											userBooking.phone = phone;
-											console.log(phone);
 										}
 									}
 								" />
@@ -152,7 +150,6 @@
 						@click="
 							{
 								{
-									console.log(userBooking);
 									saveBooking();
 								}
 							}
@@ -173,7 +170,6 @@
 
 	//get booking info from sessionStorage
 	const bookingInfo = JSON.parse(sessionStorage.getItem("bookingInfo"));
-	console.log(bookingInfo);
 	//--
 	const router = useRouter();
 	const toast = useToast();
@@ -246,10 +242,6 @@
 
 	function saveBooking() {
 		if (!firstName.value || !lastName.value || !email.value || !phone.value || !country.value.value) {
-			console.log(firstName);
-			console.log(lastName);
-			console.log(email.value);
-			console.log(phone);
 			alert("please fill all fields");
 		} else {
 			if (userBooking.value.bookings[0].returnLocation === "") {

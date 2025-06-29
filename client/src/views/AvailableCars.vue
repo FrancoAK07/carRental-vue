@@ -30,7 +30,7 @@
 							name="sort"
 							id="sort"
 							ref="typeRef"
-							@change="typeFilter(), console.log(typeRef.value)">
+							@change="typeFilter()">
 							<option value="" selected disabled></option>
 							<option value="default">all</option>
 							<option value="SUV">SUV</option>
@@ -120,7 +120,6 @@
 
 	//get booking info from sessionStorage
 	const bookingInfo = JSON.parse(sessionStorage.getItem("bookingInfo"));
-	console.log(bookingInfo);
 
 	//Calculating days between pickupDate and returnDate
 	const pickupDate = new Date(bookingInfo.pickupDate);
@@ -135,7 +134,6 @@
 		})
 	);
 
-	console.log(availableCars.value);
 	//--
 
 	//filter functions
@@ -155,7 +153,6 @@
 		availableCars.value = cars.filter((car) => {
 			return pickupDate > new Date(car.returnDate) || car.returnDate === "";
 		});
-		console.log("reset");
 	};
 
 	const typeFilter = () => {
@@ -273,7 +270,6 @@
 	//save data in session storage and go to addons component
 	const bookCar = (car) => {
 		totalPrice = parseInt(car.pricePerDay) * differenceInDays;
-		console.log(totalPrice);
 		bookingInfo.car = car;
 		bookingInfo.totalPrice = totalPrice;
 		sessionStorage.setItem("bookingInfo", JSON.stringify(bookingInfo));

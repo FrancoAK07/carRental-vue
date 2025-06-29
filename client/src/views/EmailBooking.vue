@@ -29,9 +29,6 @@
 	users = await axios.get("https://carrental-vue.onrender.com/getUsers");
 	unregisteredUsers = await axios.get("https://carrental-vue.onrender.com/getUnregisteredUsers");
 
-	console.log(users);
-	console.log(unregisteredUsers);
-
 	onBeforeRouteLeave((to, from, next) => {
 		if (to.path === "/bookings") {
 			if (bookingEmail.value) {

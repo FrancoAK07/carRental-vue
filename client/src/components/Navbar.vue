@@ -10,7 +10,9 @@
 				<router-link :to="{ path: '#' }" class="loginlink text-decoration-none" @click="handleLoginClick">Login</router-link>
 			</div>
 			<div class="col" ref="registerLink" v-show="route.path === '/'">
-				<router-link :to="{ path: '#' }" class="registerlink text-decoration-none" @click="handleRegisterClick">Register</router-link>
+				<router-link :to="{ path: '#' }" class="registerlink text-decoration-none" @click="handleRegisterClick"
+					>Register</router-link
+				>
 			</div>
 		</div>
 		<div class="hamburger-menu m-auto d-sm-none" ref="hamburgerMenu" @click="hamburgerMenuClicked">
@@ -18,7 +20,10 @@
 			<div class="bar"></div>
 			<div class="bar"></div>
 		</div>
-		<div class="navbar-links row bg-dark position-absolute w-100 m-auto p-2 start-0 z-2" ref="hamburgerLinks" v-show="showHamburgerMenu">
+		<div
+			class="navbar-links row bg-dark position-absolute w-100 m-auto p-2 start-0 z-2"
+			ref="hamburgerLinks"
+			v-show="showHamburgerMenu">
 			<div class="col-12 p-0">
 				<div class="row p-1 m-auto justify-content-center">
 					<router-link :to="{ path: '/' }" class="text-decoration-none p-0 w-auto">Home</router-link>
@@ -30,10 +35,14 @@
 					<router-link :to="{ path: '/emailbooking' }" class="text-decoration-none p-0 w-auto">Bookings</router-link>
 				</div>
 				<div class="row p-1 m-auto justify-content-center" ref="loginLinkHamburger" v-show="route.path === '/'">
-					<router-link :to="{ path: '#' }" class="loginlink text-decoration-none p-0 w-auto" @click="handleLoginClick">Login</router-link>
+					<router-link :to="{ path: '#' }" class="loginlink text-decoration-none p-0 w-auto" @click="handleLoginClick"
+						>Login</router-link
+					>
 				</div>
 				<div class="row p-1 m-auto justify-content-center" ref="registerLinkHamburger" v-show="route.path === '/'">
-					<router-link :to="{ path: '#' }" class="registerlink text-decoration-none p-0 w-auto" @click="handleRegisterClick">Register</router-link>
+					<router-link :to="{ path: '#' }" class="registerlink text-decoration-none p-0 w-auto" @click="handleRegisterClick"
+						>Register</router-link
+					>
 				</div>
 			</div>
 		</div>
@@ -46,7 +55,14 @@
 
 	const loginLink = ref(null);
 	const registerLink = ref(null);
-	const emit = defineEmits(["showLoginForm", "loginLink", "showRegisterForm", "registerLink", "loginLinkHamburger", "registerLinkHamburger"]);
+	const emit = defineEmits([
+		"showLoginForm",
+		"loginLink",
+		"showRegisterForm",
+		"registerLink",
+		"loginLinkHamburger",
+		"registerLinkHamburger",
+	]);
 	const hamburgerMenu = ref(null);
 	let showHamburgerMenu = ref(false);
 	const loginLinkHamburger = ref(null);
@@ -58,11 +74,9 @@
 		emit("registerLink", registerLink);
 		emit("loginLinkHamburger", loginLinkHamburger.value);
 		emit("registerLinkHamburger", registerLinkHamburger.value);
-		console.log(loginLinkHamburger.value);
 	});
 
 	const handleLoginClick = () => {
-		console.log("login emit");
 		emit("showLoginForm");
 		if (showHamburgerMenu.value) {
 			showHamburgerMenu.value = false;
@@ -73,7 +87,6 @@
 	const handleRegisterClick = () => {
 		showHamburgerMenu.value = false;
 		hamburgerMenu.value.classList.toggle("hamburgerActive");
-		console.log("register emit");
 		emit("showRegisterForm");
 		if (showHamburgerMenu.value) {
 			showHamburgerMenu.value = false;
@@ -83,9 +96,7 @@
 
 	const route = useRoute();
 
-	watch(route, () => {
-		console.log(route.path);
-	});
+	watch(route, () => {});
 
 	const hamburgerMenuClicked = () => {
 		showHamburgerMenu.value = !showHamburgerMenu.value;
