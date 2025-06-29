@@ -58,7 +58,7 @@
 		if (!email.value || !password.value) {
 			toast.warning("please fill all fields");
 		} else {
-			const loginUserRes = await axios.post("https://carrental-vue-server-production.up.railway.app/login", {
+			const loginUserRes = await axios.post("https://carrental-vue.onrender.com/login", {
 				email: email.value,
 				password: password.value,
 			});

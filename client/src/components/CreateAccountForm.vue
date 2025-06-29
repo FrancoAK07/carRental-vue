@@ -88,7 +88,7 @@
 		} else if (password.value.length < 5) {
 			toast.warning("password must be at least 5 characters long", { timeout: 3000 });
 		} else {
-			axios.post("https://carrental-vue-server-production.up.railway.app/registerUser", { user: user.value }).then((res) => {
+			axios.post("https://carrental-vue.onrender.com/registerUser", { user: user.value }).then((res) => {
 				toast.success(res.data);
 				emit("closeRegisterForm");
 				firstName.value = "";

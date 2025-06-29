@@ -47,7 +47,7 @@
 	let selectedAddons = [];
 	let userIsLogged = JSON.parse(sessionStorage.getItem("user"));
 
-	addonsData = await axios.get("https://carrental-vue-server-production.up.railway.app/addons");
+	addonsData = await axios.get("https://carrental-vue.onrender.com/addons");
 
 	const addons = addonsData.data;
 

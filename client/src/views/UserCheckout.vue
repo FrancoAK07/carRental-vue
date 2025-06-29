@@ -158,12 +158,10 @@
 		if (userBooking.returnLocation === "") {
 			userBooking.returnLocation = userBooking.pickupLocation;
 		}
-		axios
-			.post("https://carrental-vue-server-production.up.railway.app/userbooking", { booking: userBooking, email: user.email })
-			.then((res) => {
-				toast(res.data, { timeout: 3000 });
-			});
-		axios.post("https://carrental-vue-server-production.up.railway.app/carReturnDate", {
+		axios.post("https://carrental-vue.onrender.com/userbooking", { booking: userBooking, email: user.email }).then((res) => {
+			toast(res.data, { timeout: 3000 });
+		});
+		axios.post("https://carrental-vue.onrender.com/carReturnDate", {
 			carReturnDate: userBooking.returnDate,
 			carId: bookingInfo.car._id,
 		});

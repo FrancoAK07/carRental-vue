@@ -26,8 +26,8 @@
 	let users;
 	let unregisteredUsers;
 
-	users = await axios.get("https://carrental-vue-server-production.up.railway.app/getUsers");
-	unregisteredUsers = await axios.get("https://carrental-vue-server-production.up.railway.app/getUnregisteredUsers");
+	users = await axios.get("https://carrental-vue.onrender.com/getUsers");
+	unregisteredUsers = await axios.get("https://carrental-vue.onrender.com/getUnregisteredUsers");
 
 	console.log(users);
 	console.log(unregisteredUsers);

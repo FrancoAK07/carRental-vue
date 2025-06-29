@@ -95,12 +95,12 @@
 	const userBookings = ref([]);
 
 	if (userData) {
-		userBookingsData = await axios.get("https://carrental-vue-server-production.up.railway.app/getUserBookings", {
+		userBookingsData = await axios.get("https://carrental-vue.onrender.com/getUserBookings", {
 			params: { email: userData.email },
 		});
 		userBookings.value = userBookingsData.data;
 	} else {
-		userBookingsData = await axios.get("https://carrental-vue-server-production.up.railway.app/getUnregisteredUserBooking", {
+		userBookingsData = await axios.get("https://carrental-vue.onrender.com/getUnregisteredUserBooking", {
 			params: { email: email },
 		});
 		userBookings.value = userBookingsData.data;
@@ -109,25 +109,23 @@
 	async function deleteBooking(car, index) {
 		if (confirm("Are you sure you want to delete this booking?")) {
 			if (!userData) {
-				await axios
-					.post("https://carrental-vue-server-production.up.railway.app/deleteBooking", { booking: car, email: email })
-					.then((res) => {
-						toast.error(res.data);
-					});
-				userBookingsData = await axios.get("https://carrental-vue-server-production.up.railway.app/getUnregisteredUserBooking", {
+				await axios.post("https://carrental-vue.onrender.com/deleteBooking", { booking: car, email: email }).then((res) => {
+					toast.error(res.data);
+				});
+				userBookingsData = await axios.get("https://carrental-vue.onrender.com/getUnregisteredUserBooking", {
 					params: { email: email },
 				});
 				userBookings.value = userBookingsData.data;
 			} else {
 				await axios
-					.post("https://carrental-vue-server-production.up.railway.app/deleteUserBooking", {
+					.post("https://carrental-vue.onrender.com/deleteUserBooking", {
 						booking: car,
 						email: userData.email,
 					})
 					.then((res) => {
 						toast.error(res.data);
 					});
-				userBookingsData = await axios.get("https://carrental-vue-server-production.up.railway.app/getUserBookings", {
+				userBookingsData = await axios.get("https://carrental-vue.onrender.com/getUserBookings", {
 					params: { email: userData.email },
 				});
 				userBookings.value = userBookingsData.data;

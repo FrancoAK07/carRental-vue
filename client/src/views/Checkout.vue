@@ -196,7 +196,7 @@
 
 	let nonRegisteredUsers;
 
-	nonRegisteredUsers = await axios.get("https://carrental-vue-server-production.up.railway.app/getUnregisteredUsers");
+	nonRegisteredUsers = await axios.get("https://carrental-vue.onrender.com/getUnregisteredUsers");
 
 	window.addEventListener("click", (e) => {
 		if (details.value) {
@@ -258,7 +258,7 @@
 			for (let client of nonRegisteredUsers.data) {
 				if (client.email === email.value) {
 					axios
-						.post("https://carrental-vue-server-production.up.railway.app/booking", {
+						.post("https://carrental-vue.onrender.com/booking", {
 							booking: userBooking.value.bookings[0],
 							email: email.value,
 						})
@@ -269,12 +269,10 @@
 					return;
 				}
 			}
-			axios
-				.post("https://carrental-vue-server-production.up.railway.app/addUnregisteredUser", { client: userBooking.value })
-				.then((res) => {
-					toast(res.data);
-					router.push({ path: "/" });
-				});
+			axios.post("https://carrental-vue.onrender.com/addUnregisteredUser", { client: userBooking.value }).then((res) => {
+				toast(res.data);
+				router.push({ path: "/" });
+			});
 		}
 	}
 </script>

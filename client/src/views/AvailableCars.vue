@@ -115,7 +115,7 @@
 	let carsData;
 	let cars;
 
-	carsData = await axios.get("https://carrental-vue-server-production.up.railway.app/cars");
+	carsData = await axios.get("https://carrental-vue.onrender.com/cars");
 	cars = carsData.data;
 
 	//get booking info from sessionStorage
