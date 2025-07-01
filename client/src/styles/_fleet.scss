@@ -1,6 +1,46 @@
 .location-form {
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
+.loading-card-content {
+	padding: 16px;
+	width: 300px;
+	border-radius: 8px;
+	background-color: #f0f0f0;
+	animation: shimmer 1.5s infinite;
+	background-image: linear-gradient(to right, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
+	background-size: 200% 200%;
+}
+
+.loading-card-header,
+.loading-card-image,
+.loading-card-footer {
+	margin-bottom: 16px;
+}
+
+.loading-card-title,
+.loading-card-subtitle,
+.loading-card-price,
+.loading-card-button {
+	height: 16px;
+	width: 100%;
+	background-color: #e0e0e0;
+	border-radius: 4px;
+}
+
+.loading-card-image {
+	height: 160px;
+	background-color: #e0e0e0;
+	border-radius: 4px;
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: -100% 0;
+	}
+	100% {
+		background-position: 100% 0;
+	}
+}

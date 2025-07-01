@@ -70,7 +70,87 @@
 					</div>
 				</div>
 			</div>
-			<div class="row g-0 mt-3">
+			<div v-if="loading" class="row g-2 mt-3">
+				<div class="loading-card col-sm-6 col-lg-4 p-2 rounded-4">
+					<div class="loading-card-content">
+						<div class="loading-card-header">
+							<div class="loading-card-title shimmer mb-2"></div>
+							<div class="loading-card-subtitle shimmer"></div>
+						</div>
+						<div class="loading-card-image shimmer"></div>
+						<div class="loading-card-footer">
+							<div class="loading-card-price shimmer mb-2"></div>
+							<div class="loading-card-button shimmer"></div>
+						</div>
+					</div>
+				</div>
+				<div class="loading-card col-sm-6 col-lg-4 p-2 rounded-4">
+					<div class="loading-card-content">
+						<div class="loading-card-header">
+							<div class="loading-card-title shimmer mb-2"></div>
+							<div class="loading-card-subtitle shimmer"></div>
+						</div>
+						<div class="loading-card-image shimmer"></div>
+						<div class="loading-card-footer">
+							<div class="loading-card-price shimmer mb-2"></div>
+							<div class="loading-card-button shimmer"></div>
+						</div>
+					</div>
+				</div>
+				<div class="loading-card col-sm-6 col-lg-4 p-2 rounded-4">
+					<div class="loading-card-content">
+						<div class="loading-card-header">
+							<div class="loading-card-title shimmer mb-2"></div>
+							<div class="loading-card-subtitle shimmer"></div>
+						</div>
+						<div class="loading-card-image shimmer"></div>
+						<div class="loading-card-footer">
+							<div class="loading-card-price shimmer mb-2"></div>
+							<div class="loading-card-button shimmer"></div>
+						</div>
+					</div>
+				</div>
+				<div class="loading-card col-sm-6 col-lg-4 p-2 rounded-4">
+					<div class="loading-card-content">
+						<div class="loading-card-header">
+							<div class="loading-card-title shimmer mb-2"></div>
+							<div class="loading-card-subtitle shimmer"></div>
+						</div>
+						<div class="loading-card-image shimmer"></div>
+						<div class="loading-card-footer">
+							<div class="loading-card-price shimmer mb-2"></div>
+							<div class="loading-card-button shimmer"></div>
+						</div>
+					</div>
+				</div>
+				<div class="loading-card col-sm-6 col-lg-4 p-2 rounded-4">
+					<div class="loading-card-content">
+						<div class="loading-card-header">
+							<div class="loading-card-title shimmer mb-2"></div>
+							<div class="loading-card-subtitle shimmer"></div>
+						</div>
+						<div class="loading-card-image shimmer"></div>
+						<div class="loading-card-footer">
+							<div class="loading-card-price shimmer mb-2"></div>
+							<div class="loading-card-button shimmer"></div>
+						</div>
+					</div>
+				</div>
+				<div class="loading-card col-sm-6 col-lg-4 p-2 rounded-4">
+					<div class="loading-card-content">
+						<div class="loading-card-header">
+							<div class="loading-card-title shimmer mb-2"></div>
+							<div class="loading-card-subtitle shimmer"></div>
+						</div>
+						<div class="loading-card-image shimmer"></div>
+						<div class="loading-card-footer">
+							<div class="loading-card-price shimmer mb-2"></div>
+							<div class="loading-card-button shimmer"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div v-else class="row g-0 mt-3">
 				<div class="car-column col-sm-6 col-lg-4 p-1 rounded-4" v-for="car of cars">
 					<div class="bg-dark rounded-4 w-100 p-3 text-white">
 						<div class="row w-100 mx-auto">
@@ -105,17 +185,22 @@
 </template>
 
 <script setup>
-	import { ref, computed } from "vue";
+	import { ref, onMounted } from "vue";
 	import axios from "axios";
 	import LocationDateTimeForm from "@/components/LocationDate&Time/LocationDateTimeForm.vue";
 
 	let cars = ref();
 	let carsData;
 	let data;
+	let loading = ref(true);
 
-	data = await axios.get("https://carrental-vue.onrender.com/cars");
-	carsData = data.data;
-	cars.value = carsData;
+	onMounted(async () => {
+		data = await axios.get("https://carrental-vue.onrender.com/cars").then((data) => {
+			carsData = data.data;
+			cars.value = carsData;
+			loading.value = false;
+		});
+	});
 
 	let priceRef = ref();
 	let typeRef = ref();
